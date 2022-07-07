@@ -1,14 +1,15 @@
 <script lang="ts">
-	import Forms from "./Forms.svelte";
-	import Panels from "./Panels.svelte";
+	import Header from './lib/extra/Header.svelte';
 </script>
 
+<Header />
 <main>
-	<div class="container">
+	<div class="mainPage" />
+
+	<!-- <div class="container">
 		<div class="mainPage" />
-		<Forms />
-		<Panels />
-	</div>
+		
+	</div> -->
 </main>
 
 <style>
@@ -19,11 +20,11 @@
 		background-size: cover;
 	}
 
-	.container {
+	/* .container {
 		position: relative;
 		width: 100%;
 		background-color: rgb(58, 58, 58);
 		min-height: 100vh;
 		overflow: hidden;
-	}
+	} */
 </style>
