@@ -20,10 +20,10 @@
   <div class="corner social">
     <div class="social-block">
       <a href="/">
-          <img src='img/heart.png' alt="favorite" />
+          <img src='img/favorite.png' alt="favorite" />
       </a>
       <a href="/">
-          <img src='img/exit.png' alt="log out" />
+          <img src='img/login.png' alt="log in" />
       </a>
   </div>
   </div>
