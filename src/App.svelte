@@ -1,30 +1,21 @@
 <script lang="ts">
 	import Header from './lib/extra/Header.svelte';
+	import Filters from './lib/main/Filters.svelte';
 </script>
 
 <Header />
 <main>
-	<div class="mainPage" />
-
-	<!-- <div class="container">
-		<div class="mainPage" />
-		
-	</div> -->
+	<div class="title">
+		<p>InnoAfisha</p>
+	</div>
+	<Filters />
 </main>
 
 <style>
-	.mainPage {
+	.title {
 		width: 100%;
-		height: 100vh;
+		height: 50vh;
 		background: url(../img/background.webp) center no-repeat;
 		background-size: cover;
 	}
-
-	/* .container {
-		position: relative;
-		width: 100%;
-		background-color: rgb(58, 58, 58);
-		min-height: 100vh;
-		overflow: hidden;
-	} */
 </style>
