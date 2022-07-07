@@ -1,9 +1,9 @@
 export const images = [
     {
-            name: "Sharks",
-            url: "https://media3.giphy.com/media/XWHe62Za5zPck/giphy.gif?cid=ecf05e47569ko4taxmf5vo4pw5m9t6ef5j6p0im94heewuly&rid=giphy.gif",
+            name: "Harry Potter and the Philosopher's Stone",
+            url: "https://i.guim.co.uk/img/media/7576688b2a01536172c4cd04d77978f4a128a195/0_121_3020_1813/master/3020.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=ebbf699229de3ff84fa821372f01326a",
             keyword: "nature",
-            descr: "Lorem ipsum dolor.."
+            descr: "25 Nov, 12:00 Art Space"
     }, 
     {
             name: "Sunlight",
