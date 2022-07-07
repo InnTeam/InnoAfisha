@@ -5,6 +5,7 @@ class EventModel(models.Model):
     id = models.AutoField(primary_key=True)
     event_name = models.CharField(max_length=100, null=False, blank=False)
     description = models.CharField(max_length=500, null=False, blank=False)
+    type = models.CharField(max_length=100, null=False, blank=False)
     price = models.FloatField(null=False, blank=False)
     picture = models.CharField(max_length=1000, null=True, blank=True, default='')
     date = models.DateField(null=False, blank=False)
