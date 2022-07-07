@@ -1,16 +1,17 @@
 <script lang="ts">
 	import Header from './lib/extra/Header.svelte';
-	import Filters from './lib/main/Filters.svelte';
+	import Filters from './lib/filters/Filters.svelte';
+	// import Footer from './lib/extra/Footer.svelte';
 </script>
 
-<Header />
 <main>
+	<Header />
 	<div class="title">
 		<p>InnoAfisha</p>
 	</div>
 	<Filters />
+	<!-- <Footer /> -->
 </main>
-
 <style>
 	.title {
 		width: 100%;

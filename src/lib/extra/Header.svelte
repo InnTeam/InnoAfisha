@@ -51,7 +51,7 @@
     font-size: x-large;
 		/* margin-left: 8.9rem; */
 	}
-	ul {
+	/* ul {
 		position: relative;
 		padding: 0;
 		margin: 0;
@@ -69,13 +69,13 @@
 	}
 	.active a{
 		color: var(--accent-color);
-	}
+	} */
 	img{
 		width: 2.5em;
 		height: 2.5em;
 		object-fit: contain;
 	}
-	nav a {
+	/* nav a {
 		display: flex;
 		height: 100%;
 		align-items: center;
@@ -87,7 +87,7 @@
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;
-	}
+	} */
 	a:hover {
 		color: var(--accent-color);
 	}
