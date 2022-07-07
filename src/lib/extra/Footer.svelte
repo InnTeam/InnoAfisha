@@ -4,10 +4,10 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <a href="#a"><img src="img/footer-logo.png" alt=""></a>
+                        <a href="#a"><img src="/" alt=""></a>
                     </div>
                     <p>The Customer is at the heart of our unique bussiness model, which include design.</p>
-                    <a href="#b"><img src="img/payment.png" alt=""></a>
+                    <a href="#b"><img src="/" alt=""></a>
                 </div>
             </div>
 

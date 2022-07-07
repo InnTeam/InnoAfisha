@@ -1,14 +1,13 @@
 <script lang="ts">
 	import Header from './lib/extra/Header.svelte';
+	import TextImage from './lib/extra/TextImage.svelte';
 	import Filters from './lib/filters/Filters.svelte';
 	import Footer from './lib/extra/Footer.svelte';
 </script>
 
 <main>
 	<Header />
-	<div class="title">
-		<p>InnoAfisha</p>
-	</div>
+	<TextImage />
 	<Filters />
 	<Footer />
 </main>
@@ -18,10 +17,4 @@
         color: #1F3E24;
         transition: background-color 0.3s
     }
-    .title {
-		width: 100%;
-		height: 50vh;
-		background: url(../img/background.webp) center no-repeat;
-		background-size: cover;
-	}
 </style>
