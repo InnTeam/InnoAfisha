@@ -8,7 +8,7 @@ export const events = [ {
         date: "2022-07-07",
         time: "18:00:00",
         rating: 16,
-        location: "\"ul. Parkovaya, 1, Innopolis, Republic of Tatarstan",
+        location: "ArtSpace",
         contacts: "@ArtSpaceInno",
         link: "https://www.innopoliscinema.ru/"
     },
@@ -22,7 +22,7 @@ export const events = [ {
         date: "2022-07-07",
         time: "18:00:00",
         rating: 16,
-        location: "\"ul. Parkovaya, 1, Innopolis, Republic of Tatarstan",
+        location: "ArtSpace",
         contacts: "@ArtSpaceInno",
         link: "https://www.innopoliscinema.ru/"
     },
@@ -36,7 +36,7 @@ export const events = [ {
         date: "2022-07-07",
         time: "18:00:00",
         rating: 16,
-        location: "\"ul. Parkovaya, 1, Innopolis, Republic of Tatarstan",
+        location: "ArtSpace",
         contacts: "@ArtSpaceInno",
         link: "https://www.innopoliscinema.ru/"
     },

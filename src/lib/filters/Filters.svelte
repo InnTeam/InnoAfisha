@@ -46,7 +46,8 @@
           <div class="content">
             <img src={picture} alt={event_name} style="width:100%" />
             <h4>{event_name}</h4>
-            <p>{description}</p>
+            <h5>{date}, {time}</h5>
+            <p>{location}</p>
           </div>
         </div>
       {:else}
@@ -54,7 +55,8 @@
           <div class="content">
             <img src={picture} alt={event_name} style="width:100%" />
             <h4>{event_name}</h4>
-            <p>{description}</p>
+            <p>{date}, {time}</p>
+            <p>{location}</p>
           </div>
         </div>
       {/if}
@@ -83,9 +85,14 @@
     font-size: 2rem;
     margin: 0;
   }
+  h5 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
 
   p {
     margin: 0 0 0.5rem;
+    font-size: 1.2rem;
     position: relative;
   }
 

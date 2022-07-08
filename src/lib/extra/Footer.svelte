@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <!-- <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="footer-about">
                     <div class="footer-logo">
                         <a href="#a"><img src="/" alt=""></a>
@@ -9,9 +9,9 @@
                     <p>The Customer is at the heart of our unique bussiness model, which include design.</p>
                     <a href="#b"><img src="/" alt=""></a>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+            <!-- <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                 <div class="footer-widget">
                     <h6>Shopping</h6>
                     <ul>
@@ -22,7 +22,7 @@
 
                     </ul>
                 </div>
-            </div>
+            </div> -->
 
             <div class="col-lg-2  col-md-3 col-sm-6">
                 <div class="footer-widget">
@@ -41,7 +41,7 @@
                 <div class="footer-widget">
                     <h6>NewsLetter</h6>
                     <div class="footer-newslatter">
-                        <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                        <p>Be the first to know about new events in Innopolis!</p>
                         <form action="#">
                             <input type="text" placeholder="Your Email">
                             <button type="submit"><span><i class="fa fa-envelope"
@@ -51,12 +51,12 @@
 
                 </div>
             </div>
+
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="footer-copyright-text">
-                    <p>Copyright &copy; 2021 All rights reserved | This template is made with <i class="fa fa-heart-o" arial-hidden="true"></i>
-                         by <a href="#a">FantacyDesigns</a></p>
+                    <p>Copyright &copy; 2022 All rights reserved.</p>
                 </div>
             </div>
         </div>
