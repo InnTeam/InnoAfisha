@@ -3,13 +3,12 @@
 	import TextImage from './lib/extra/TextImage.svelte';
 	import Filters from './lib/filters/Filters.svelte';
 	import Footer from './lib/extra/Footer.svelte';
-	import VolunteerCards from './lib/main/VolunteerCards.svelte';
 </script>
 
 <main>
 	<Header />
 	<TextImage />
-	<Filters />
+	<Filters />~
 	<Footer />
 </main>
 <style>
