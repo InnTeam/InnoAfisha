@@ -1,5 +1,5 @@
 ﻿Django==3.2.14
-django-cors-headers==3.13.0
+django-cors-headers==3.10.1
 django-templated-mail==1.1.1
 djangorestframework==3.13.1
 djangorestframework-simplejwt==4.8.0
