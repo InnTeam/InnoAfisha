@@ -8,7 +8,7 @@
 <main>
 	<Header />
 	<TextImage />
-	<Filters />~
+	<Filters />
 	<Footer />
 </main>
 <style>
