@@ -1,29 +1,44 @@
 <script>
-  import { events } from "./imgData.js";
-  import { types } from "./imgData.js";
+  // import { events } from "./imgData.js";
+  // import { types } from "./imgData.js";
 
   import ButtonContainer from "./ButtonContainer.svelte";
   import Gallery from "./Gallery.svelte";
+  const types = ["all", "IT", "music", "culture", "cinema", "sport", "other"];
 
   let selected = "all";
 
   const filterSelection = (e) => (selected = e.target.dataset.name);
 
-  import { onMount } from "svelte";
-  import { apiData, events_names } from "./store.js";
+  import Spinner from "./spinner.svelte";
 
-  onMount(async () => {
-    fetch("http://127.0.0.1:8000/api/v1/events")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data[0]);
-        apiData.set(data[0]);
-      })
-      .catch((error) => {
-        console.log(error);
-        return [];
-      });
-  });
+  let events = [];
+  let colNames = [];
+  let sourceJson = "events";
+
+  async function getThings() {
+    console.log(sourceJson);
+
+    const res = await fetch(
+      `http://innoafisha.pythonanywhere.com/api/v1/` + sourceJson
+    );
+    const json = await res.json();
+
+    if (res.ok) {
+      setTimeout(() => {
+        events = json;
+        //grab column names
+        colNames = Object.keys(events[0]);
+
+        return true;
+      }, 0 * Math.random());
+    } else {
+      throw new Error(text);
+    }
+  }
+
+  let promise = getThings();
+
 </script>
 
 <main>
@@ -39,29 +54,44 @@
       </button>
     {/each}
   </ButtonContainer>
-  <Gallery>
-    {#each events as { event_name, description, type, price, picture, date, time, rating, location, contacts, link}}
-      {#if selected === "all"}
-        <div class="show column">
-          <div class="content">
-            <img src={picture} alt={event_name} style="width:100%" />
-            <h4>{event_name}</h4>
-            <h5>{date}, {time}</h5>
-            <p>{location}</p>
-          </div>
+  
+{#await promise}
+<Spinner />
+{:then getThings}
+<Gallery>
+  {#each events as event, index (event.id)}
+    {#if selected === "all"}
+      <div class="show column">
+        <div class="content">
+          <img src={event['picture']} alt={event['event_name']} style="width:100%" />
+          <h4>{event['event_name']}</h4>
+          <h5>{event['date']}, {event['time']}</h5>
+          <p>{event['location']}</p>
         </div>
-      {:else}
-        <div class:show={selected === type} class="column">
-          <div class="content">
-            <img src={picture} alt={event_name} style="width:100%" />
-            <h4>{event_name}</h4>
-            <p>{date}, {time}</p>
-            <p>{location}</p>
-          </div>
+      </div>
+    {:else}
+      <div class:show={selected === event['type']} class="column">
+        <div class="content">
+          <img src={event['picture']} alt={event['event_name']} style="width:100%" />
+          <h4>{event['event_name']}</h4>
+          <p>{event['date']}, {event['time']}</p>
+          <p>{event['location']}</p>
         </div>
-      {/if}
+      </div>
+    {/if}
+  {/each}
+</Gallery>
+
+<!-- {#each events as event, index (event.id)}
+      <tr>
+        {#each colNames as col}
+          <td>{event[col]}</td>
+        {/each}
+      </tr>
     {/each}
-  </Gallery>
+{:catch error}
+<p style="color: red">{error.message}</p> -->
+{/await}
 </main>
 
 <style>
