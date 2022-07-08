@@ -53,7 +53,7 @@ form.sign-in-form {
 	font-weight: 500;
 }
 
-.btn {
+.btnA {
 	width: 150px;
 	background-color: #7AAE72;
 	border: none;
@@ -68,11 +68,11 @@ form.sign-in-form {
 	transition: 0.5s;
 }
 
-.btn:hover {
+.btnA:hover {
 	background-color: #7AAE72;
 }
 
-.container:before {
+.containerA:before {
 	content: "";
 	position: absolute;
 	height: 2500px;
@@ -122,7 +122,7 @@ form.sign-in-form {
 	padding: 0.7rem 0;
 }
 
-.btn.transparent {
+.btnA.transparent {
 	margin: 0;
 	background: none;
 	border: 2px solid #fff;
@@ -139,39 +139,39 @@ form.sign-in-form {
 
 
 
-.container.sign-up-mode:before {
+.containerA.sign-up-mode:before {
 	transform: translate(100%, -50%);
 	right: 52%;
 }
 
-.container.sign-up-mode .left-panel .image,
-.container.sign-up-mode .left-panel .content {
+.containerA.sign-up-mode .left-panel .image,
+.containerA.sign-up-mode .left-panel .content {
 	transform: translateX(-800px);
 }
 
-.container.sign-up-mode .signin-signup {
+.containerA.sign-up-mode .signin-signup {
 	left: 25%;
 }
 
-.container.sign-up-mode form.sign-up-form {
+.containerA.sign-up-mode form.sign-up-form {
 	opacity: 1;
 	z-index: 2;
 }
 
-.container.sign-up-mode form.sign-in-form {
+.containerA.sign-up-mode form.sign-in-form {
 	opacity: 0;
 	z-index: 1;
 }
 
-.container.sign-up-mode .right-panel .image,
-.container.sign-up-mode .right-panel .content {
+.containerA.sign-up-mode .right-panel .image,
+.containerA.sign-up-mode .right-panel .content {
 	transform: translateX(0%);
 }
 
-.container.sign-up-mode .left-panel {
+.containerA.sign-up-mode .left-panel {
 	pointer-events: none;
 }
 
-.container.sign-up-mode .right-panel {
+.containerA.sign-up-mode .right-panel {
 	pointer-events: all;
 }

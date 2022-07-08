@@ -3,7 +3,7 @@
         <div class="content">
             <h1 style="font-size: 3rem">Innopolis Afisha</h1>
             <p>Sign up and select your favorite events!</p>
-            <button class="btn transparent" id="sign-up-btn"> Sign up </button>
+            <button class="btnA transparent" id="sign-up-btn"> Sign up </button>
         </div>
         <img src="img/log.svg" class="image" alt="" />
     </div>
@@ -11,7 +11,7 @@
         <div class="content">
             <h1 style="font-size: 3rem">Innopolis Afisha</h1>
             <p>Sign in and select your favorite events!</p>
-            <button class="btn transparent" id="sign-in-btn"> Sign in </button>
+            <button class="btnA transparent" id="sign-in-btn"> Sign in </button>
         </div>
         <img src="img/register.svg" class="image" alt="" />
     </div>

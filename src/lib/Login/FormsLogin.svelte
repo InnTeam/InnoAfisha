@@ -1,28 +1,29 @@
 <script lang="ts">
     import axios from "axios";
 
-    let username = "",
-        email = "",
-        password = "";
-
+    let usernameL = "",
+        passwordL = "";
+    let axiosConfig = {
+        headers: {
+            "Content-Type": "application/json",
+        },
+    };
     $: submit = async () => {
-        let axiosConfig = {
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
         await axios
             .post(
-                "http://127.0.0.1:8000/api/v1/authusers/",
+                "https://innoafisha.pythonanywhere.com/auth/token/login",
                 {
-                    email: email,
-                    username: username,
-                    password: password,
+                    password: passwordL,
+                    username: usernameL,
                 },
                 axiosConfig
             )
             .then((res) => {
                 console.log("RESPONSE RECEIVED: ", res);
+                if (res.status === 200)
+                    axios.defaults.headers.common[
+                        "Authorization"
+                    ] = `Bearer ${res.data.auth_token}`;
             })
             .catch((err) => {
                 console.log("AXIOS ERROR: ", err);
@@ -30,21 +31,17 @@
     };
 </script>
 
-<form action="#" class="sign-up-form" on:submit|preventDefault={submit}>
-    <h2 class="title">Sign up</h2>
+<form action="#" class="sign-in-form" on:submit|preventDefault={submit}>
+    <h2 class="titleA">Sign in</h2>
     <div class="input-field">
         <i class="fas fa-user" />
-        <input bind:value={username} type="text" placeholder="Username" />
-    </div>
-    <div class="input-field">
-        <i class="fas fa-envelope" />
-        <input bind:value={email} type="email" placeholder="Email" />
+        <input bind:value={usernameL} type="text" placeholder="Username" />
     </div>
     <div class="input-field">
         <i class="fas fa-lock" />
-        <input bind:value={password} type="password" placeholder="Password" />
+        <input bind:value={passwordL} type="password" placeholder="Password" />
     </div>
-    <input type="submit" class="btn" value="Sign up" />
+    <input type="submit" value="Login" class="btnA solid" />
 </form>
 
 <style>
@@ -60,7 +57,7 @@
         grid-row: 1 / 2;
     }
 
-    .title {
+    .titleA {
         font-size: 3rem;
         color: #444;
         margin-bottom: 10px;
