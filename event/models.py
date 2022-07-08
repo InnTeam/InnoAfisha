@@ -7,7 +7,7 @@ class EventModel(models.Model):
     description = models.CharField(max_length=500, null=False, blank=False)
     type = models.CharField(max_length=100, null=False, blank=False)
     price = models.FloatField(null=False, blank=False)
-    picture = models.CharField(max_length=1000, null=True, blank=True, default='')
+    picture = models.CharField(max_length=5000, null=True, blank=True, default='')
     date = models.DateField(null=False, blank=False)
     time = models.TimeField(null=False, blank=False)
     rating = models.IntegerField(null=False, blank=False)
