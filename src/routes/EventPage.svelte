@@ -65,7 +65,7 @@
     @import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=M+PLUS+2&display=swap");
     body {
-      background-color: #b6eeb0;
+      background-color: #c2ecbf;
       padding: 0;
       margin: 0;
     }

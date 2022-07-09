@@ -3,6 +3,7 @@
 	import TextImage from "../lib/extra/TextImage.svelte";
 	import Filters from "../lib/filters/Filters.svelte";
 	import Footer from "../lib/extra/Footer.svelte";
+	import token from "../lib/Login/FormsLogin.svelte"
 
 	import { onMount } from "svelte";
 	import axios from "axios";

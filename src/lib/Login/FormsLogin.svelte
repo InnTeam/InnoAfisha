@@ -18,9 +18,9 @@
             }
         );
         if (response.status === 200) {
-            axios.defaults.headers.common[
-                "Authorization"
-            ] = `Bearer ${response.data.auth_token}`;
+            axios.defaults.headers.common["Authorization"] = `Token ${response.data.auth_token}`;
+            document.cookie=`access_token=${response.data.auth_token}`
+            console.log(document.cookie)
             await push("/");
         }
     };
