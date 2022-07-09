@@ -30,7 +30,7 @@
           <div class="col_left">
             <div class="event_pic">
               <!-- svelte-ignore a11y-missing-attribute -->
-              <img src={event["picture"]} width="373px" height="373px" />
+              <img class="event_pic" src={event["picture"]} width="373px" height="373px" />
               <div class="dateplace">
                 <div class="line1">
                   <button class="rectangle2">{event["date"]}</button>
@@ -40,7 +40,7 @@
               <div class="numsite">
                 <div class="line2">
                   <button class="rectangle2">{event["time"]}</button>
-                  <button class="btn"><a href={event["link"]}>Site</a></button>
+                  <a href={event["link"]}><button class="btn">Site</button></a>
                 </div>
               </div>
             </div>
@@ -65,14 +65,18 @@
     @import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=M+PLUS+2&display=swap");
     body {
-      background-color: #dff2dc;
+      background-color: #b6eeb0;
       padding: 0;
       margin: 0;
     }
+    .event_pic {
+      border-radius: 11px;
+    }
     .rectangle1 {
-      text-align: center;
+      padding: 10px;
       background-color: #fff;
       border-radius: 11px;
+      margin-bottom: 30px;
     }
     .rectangle2 {
       font-family: "M PLUS 2", sans-serif;
@@ -106,15 +110,15 @@
     }
     .title {
       font-size: 23px;
-      padding-left: 60px;
-      max-width: 500px;
+      padding-top: 40px;
     }
     .title::after {
       content: "";
       display: block;
-      width: auto;
       height: 2px;
+      width: 500px;
       background-color: #b3caaf;
+      margin: 15px auto;
     }
     .dateplace {
       font-size: 20px;
@@ -124,10 +128,9 @@
     }
     .description {
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
       color: #1f3e24;
-      padding-left: 60px;
-      padding-right: 60px;
+      font-size: 25px;
     }
     .btn {
       font-family: "M PLUS 2", sans-serif;
@@ -152,5 +155,9 @@
     }
     .line2 {
       padding-top: 10px;
+      padding-bottom: 30px;
+    }
+    .line1 {
+      padding-top: 30px;
     }
   </style>
