@@ -2,6 +2,7 @@
   import Gallery from "./Gallery.svelte";
   import Spinner from "./spinner.svelte";
   import axios from "axios";
+  import { push } from "svelte-spa-router";
 
   let eventsIds = [];
   let events = [];
@@ -15,7 +16,11 @@
     )}`;
     let res = await axios.get(
       "https://innoafisha.pythonanywhere.com/api/v1/favourites"
-    );
+    ).catch(async () => {
+        await push("#/auth");
+        location.reload();
+        await push("#/auth");
+    });
     eventsIds = res.data;
     res = await axios.get(`http://innoafisha.pythonanywhere.com/api/v1/events`);
     events = res.data;

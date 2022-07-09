@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
   import ButtonContainer from "./ButtonContainer.svelte";
   import Gallery from "./Gallery.svelte";
   import axios from "axios";
+  import { push } from "svelte-spa-router";
   const types = ["all", "IT", "music", "culture", "cinema", "sport", "other"];
 
   let selected = "all";
@@ -28,14 +29,13 @@
 
         return true;
       }, 0 * Math.random());
-    } else {
-      throw new Error(text);
     }
   }
 
   let promise = getThings();
 
   $: addFavEvent = async (id) => {
+    console.log('Aboba')
     axios.defaults.headers.common[
       "Authorization"
     ] = `Token ${document.cookie.replace(
@@ -52,7 +52,11 @@
           "Content-Type": "application/json",
         },
       }
-    );
+    ).catch(async () => {
+        await push("#/auth");
+        location.reload();
+        await push("#/auth");
+    });
   };
 </script>
 
