@@ -19,7 +19,7 @@
         <div class="social_block">
             <a
                 class="liked"
-                href="/"
+                href="#/favourites"
                 style="text-decoration: none; color: #4E7149"
             >
                 <!-- svelte-ignore a11y-missing-attribute -->
