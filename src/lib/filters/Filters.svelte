@@ -68,8 +68,9 @@
               <h4>{event["event_name"]}</h4>
               <h5>{event["date"]}, {event["time"]}</h5>
               <p>{event["location"]}</p>
-              <button type="button" name="run_script"
-                ><a href="#/event/{event.id}">Read more...</a></button
+              <a class="pickpick" href="#/event/{event.id}"
+                ><button type="button" name="run_script">Read More...</button
+                ></a
               >
             </div>
           </div>
@@ -84,15 +85,15 @@
               <h4>{event["event_name"]}</h4>
               <p>{event["date"]}, {event["time"]}</p>
               <p>{event["location"]}</p>
-              <button type="button" name="run_script"
-                ><a href="#/event/{event.id}">Read more...</a></button
+              <a class="pickpick" href="#/event/{event.id}"
+                ><button type="button" name="run_script">Read More...</button
+                ></a
               >
             </div>
           </div>
         {/if}
       {/each}
     </Gallery>
-
   {/await}
 </main>
 
@@ -104,21 +105,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* 	background-color: red; */
   }
 
   button[name="run_script"] {
     border: none;
     border-radius: 7px;
     padding: 10px 25px;
-    background: #ff9900;
+    background: #7aae72;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
     color: white;
   }
+
   button[name="run_script"]:hover {
-    background: #ff6600;
+    background: #1f3e24;
+  }
+
+  .pickpick {
+    position: relative;
+    bottom: 0px;
   }
 
   h4 {
