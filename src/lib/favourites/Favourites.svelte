@@ -119,34 +119,4 @@
   .show {
     display: flex;
   }
-
-  .btn {
-    font-family: "M PLUS 2", sans-serif;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: 0;
-    border-radius: 5px;
-    background: #7aae72;
-    font-size: 18px;
-    padding: 4px 8px;
-    color: #1f3e24;
-    min-width: 150px;
-    cursor: pointer;
-    margin: 30px 10px;
-    margin-bottom: 0;
-    transition: 0.1s ease-in-out;
-    text-transform: uppercase;
-  }
-
-  .btn:hover {
-    background: rgb(59, 102, 59);
-    cursor: pointer;
-  }
-
-  .btn:active,
-  .active {
-    background-color: rgb(59, 102, 59);
-    color: white;
-  }
 </style>

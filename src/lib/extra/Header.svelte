@@ -1,10 +1,21 @@
 <script lang="ts">
     let dateTime = String(new Date());
     dateTime = dateTime.slice(0, 15);
+    import { push } from "svelte-spa-router";
+
+    $: logoutFrom = async () => {
+        document.cookie = "access_token" + "=; Max-Age=-1;";
+        location.reload();
+    };
+    $: loginForm = async () => {
+        await push("#/auth");
+        location.reload();
+        await push("#/auth");
+    };
 </script>
 
 <header>
-	<div class="corner">
+    <div class="corner">
         <div class="corner">{dateTime}</div>
     </div>
 
@@ -12,7 +23,7 @@
         class="title"
         style="font-family: 'Lemon', cursive; font-size: 30px; color: #1F3E24;"
     >
-        InnoAfisha
+        <a class="titleLink" href="#/">InnoAfisha</a>
     </nav>
 
     <div class="corner_social">
@@ -23,27 +34,69 @@
                 style="text-decoration: none; color: #4E7149"
             >
                 <!-- svelte-ignore a11y-missing-attribute -->
-                <img
-                    src='img/favorite.png'
-                    width="30px"
-                    height="auto"
-                /></a
+                <img src="img/favorite.png" width="30px" height="auto" /></a
             >
-            <a href="#/auth" style="text-decoration: none; color: #4E7149">
-                <!-- svelte-ignore a11y-missing-attribute -->
-                <img src='img/login.png' width="19px" height="auto" /></a
-            >
+            {#if !document.cookie}
+                <button
+                    type="loginForm"
+                    class="btnLogin"
+                    on:click={loginForm()}
+                    style="text-decoration: none; border: none"
+                >
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <img
+                        src="img/logout.svg"
+                        width="28px"
+                        height="auto"
+                    /></button
+                >
+            {:else}
+                <button
+                    type="logoutFrom"
+                    class="btnLogout"
+                    on:click={logoutFrom()}
+                    style="text-decoration: none; border: none"
+                >
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <img
+                        src="img/login.png"
+                        width="19px"
+                        height="auto"
+                    /></button
+                >
+            {/if}
         </div>
     </div>
 </header>
 
 <style>
-  header {
+    header {
         display: flex;
         justify-content: space-between;
         height: 4rem;
         align-items: center;
         background-color: #7aae72;
+    }
+
+    .btnLogout {
+        background-color: #7aae72;
+    }
+
+    .btnLogout:hover {
+        cursor: pointer;
+    }
+
+    .btnLogin {
+        background-color: #7aae72;
+    }
+
+    .btnLogin:hover {
+        cursor: pointer;
+    }
+
+    .titleLink {
+        text-decoration: none;
+        color: #1f3e24;
     }
 
     .corner {

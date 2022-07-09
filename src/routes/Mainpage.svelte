@@ -8,13 +8,16 @@
 	import axios from "axios";
 
 	onMount(async () => {
-		axios.defaults.headers.common["Authorization"] = `Token ${document.cookie.replace(/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/, "$1")}`;
-		const response = await axios.get('https://innoafisha.pythonanywhere.com/api/v1/authusers/');
-
-		if(response.status === 200) {
-			console.log(response);
-		}
-	})
+		axios.defaults.headers.common[
+			"Authorization"
+		] = `Token ${document.cookie.replace(
+			/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
+			"$1"
+		)}`;
+		await axios.get(
+			"https://innoafisha.pythonanywhere.com/api/v1/authusers/"
+		);
+	});
 </script>
 
 <main>

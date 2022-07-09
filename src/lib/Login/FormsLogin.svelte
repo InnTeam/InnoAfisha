@@ -1,7 +1,6 @@
 <script lang="ts">
     import axios from "axios";
     import { push } from "svelte-spa-router";
-
     let usernameL = "",
         passwordL = "";
     $: submit = async () => {
@@ -18,8 +17,11 @@
             }
         );
         if (response.status === 200) {
-            axios.defaults.headers.common["Authorization"] = `Token ${response.data.auth_token}`;
-            document.cookie=`access_token=${response.data.auth_token}`
+            axios.defaults.headers.common[
+                "Authorization"
+            ] = `Token ${response.data.auth_token}`;
+            document.cookie = `access_token=${response.data.auth_token}`;
+            console.log("Aboba");
             await push("/");
         }
     };

@@ -1,9 +1,7 @@
 <script>
-  // import { events } from "./imgData.js";
-  // import { types } from "./imgData.js";
-
   import ButtonContainer from "./ButtonContainer.svelte";
   import Gallery from "./Gallery.svelte";
+  import axios from "axios";
   const types = ["all", "IT", "music", "culture", "cinema", "sport", "other"];
 
   let selected = "all";
@@ -36,6 +34,26 @@
   }
 
   let promise = getThings();
+
+  $: addFavEvent = async (id) => {
+    axios.defaults.headers.common[
+      "Authorization"
+    ] = `Token ${document.cookie.replace(
+      /(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
+      "$1"
+    )}`;
+    const response = await axios.post(
+      "https://innoafisha.pythonanywhere.com/api/v1/favourites",
+      {
+        event: id,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+  };
 </script>
 
 <main>
@@ -59,33 +77,49 @@
       {#each events as event, index (event.id)}
         {#if selected === "all"}
           <div class="show column">
-            <a class="pickpick" href="#/event/{event.id}">
-              <div class="content">
+            <div class="content">
+              <a class="pickpick" href="#/event/{event.id}">
                 <img
                   src={event["picture"]}
                   alt={event["event_name"]}
                   style="width:100%"
                 />
-                <h4>{event["event_name"]}</h4>
-                <h5>{event["date"]}, {event["time"]}</h5>
-                <p>{event["location"]}</p>
-              </div>
-            </a>
+              </a>
+              <h4>{event["event_name"]}</h4>
+              <h5>{event["date"]}, {event["time"]}</h5>
+              <p>{event["location"]}</p>
+              <button
+                type="addFavEvent"
+                class="bLikedEv"
+                on:click={addFavEvent(event.id)}
+              >
+                <!-- svelte-ignore a11y-missing-attribute -->
+                <img class="likedEv" src="img/favorite.png" />
+              </button>
+            </div>
           </div>
         {:else}
           <div class:show={selected === event["type"]} class="column">
-            <a class="pickpick" href="#/event/{event.id}">
-              <div class="content">
+            <div class="content">
+              <a class="pickpick" href="#/event/{event.id}">
                 <img
                   src={event["picture"]}
                   alt={event["event_name"]}
                   style="width:100%"
                 />
-                <h4>{event["event_name"]}</h4>
-                <p>{event["date"]}, {event["time"]}</p>
-                <p>{event["location"]}</p>
-              </div>
-            </a>
+              </a>
+              <h4>{event["event_name"]}</h4>
+              <p>{event["date"]}, {event["time"]}</p>
+              <p>{event["location"]}</p>
+              <button
+                type="addFavEvent"
+                class="bLikedEv"
+                on:click={addFavEvent(event.id)}
+              >
+                <!-- svelte-ignore a11y-missing-attribute -->
+                <img class="likedEv" src="img/favorite.png" />
+              </button>
+            </div>
           </div>
         {/if}
       {/each}
@@ -102,16 +136,29 @@
     justify-content: center;
   }
 
+  .likedEv {
+    width: 30px;
+    height: auto;
+  }
+
+  .bLikedEv {
+    border: none;
+    background-color: white;
+  }
+
+  .bLikedEv:hover {
+    cursor: pointer;
+  }
+
   .pickpick {
     position: relative;
     bottom: 0px;
     text-decoration: none;
     color: #1f3e24;
-    
   }
 
-  .pickpick:hover{
-   opacity: 0.8; 
+  .pickpick:hover {
+    opacity: 0.8;
   }
 
   h4 {
