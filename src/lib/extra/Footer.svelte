@@ -37,6 +37,7 @@
 <style>
     ul {
         padding-left: 0;
+        color: #b7b7b7;
     }
 
     .footer {
@@ -60,7 +61,7 @@
         list-style: none;
     }
     .footer-widget .footer-newslatter p {
-        color: #b7b7b7;
+        color: #ffffff;
     }
 
     .footer-copyright-text {

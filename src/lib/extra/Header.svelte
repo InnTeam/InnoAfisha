@@ -1,10 +1,11 @@
-<script>
-
+<script lang="ts">
+    let dateTime = String(new Date());
+    dateTime = dateTime.slice(0, 15);
 </script>
 
 <header>
 	<div class="corner">
-        <div class="corner">27 August, Wednesday</div>
+        <div class="corner">{dateTime}</div>
     </div>
 
     <nav
@@ -76,7 +77,7 @@
     }
 
     .title {
-        margin-right: 12rem;
+        margin-right: 4rem;
     }
 
     .corner_social {

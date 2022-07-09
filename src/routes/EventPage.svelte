@@ -151,7 +151,6 @@
     }
     .btn:focus {
       outline: none;
-      box-shadow: 0 0 0 4px rgb(59, 102, 59);
     }
     .line2 {
       padding-top: 10px;
