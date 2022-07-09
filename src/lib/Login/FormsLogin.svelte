@@ -1,33 +1,28 @@
 <script lang="ts">
     import axios from "axios";
+    import { push } from "svelte-spa-router";
 
     let usernameL = "",
         passwordL = "";
-    let axiosConfig = {
-        headers: {
-            "Content-Type": "application/json",
-        },
-    };
     $: submit = async () => {
-        await axios
-            .post(
-                "https://innoafisha.pythonanywhere.com/auth/token/login",
-                {
-                    password: passwordL,
-                    username: usernameL,
+        const response = await axios.post(
+            "https://innoafisha.pythonanywhere.com/auth/token/login",
+            {
+                password: passwordL,
+                username: usernameL,
+            },
+            {
+                headers: {
+                    "Content-Type": "application/json",
                 },
-                axiosConfig
-            )
-            .then((res) => {
-                console.log("RESPONSE RECEIVED: ", res);
-                if (res.status === 200)
-                    axios.defaults.headers.common[
-                        "Authorization"
-                    ] = `Bearer ${res.data.auth_token}`;
-            })
-            .catch((err) => {
-                console.log("AXIOS ERROR: ", err);
-            });
+            }
+        );
+        if (response.status === 200) {
+            axios.defaults.headers.common[
+                "Authorization"
+            ] = `Bearer ${response.data.auth_token}`;
+            await push("/");
+        }
     };
 </script>
 

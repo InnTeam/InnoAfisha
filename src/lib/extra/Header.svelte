@@ -28,7 +28,7 @@
                     height="auto"
                 /></a
             >
-            <a href="/" style="text-decoration: none; color: #4E7149">
+            <a href="#/auth" style="text-decoration: none; color: #4E7149">
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <img src='img/login.png' width="19px" height="auto" /></a
             >
