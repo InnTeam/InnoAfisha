@@ -1,20 +1,15 @@
 <script lang="ts">
-	import Header from './lib/extra/Header.svelte';
-	import TextImage from './lib/extra/TextImage.svelte';
-	import Filters from './lib/filters/Filters.svelte';
-	import Footer from './lib/extra/Footer.svelte';
+	import Router from "svelte-spa-router";
+	import EventPage from "./routes/EventPage.svelte";
+	import MainPage from "./routes/MainPage.svelte";
+	import Auth from "./routes/Auth.svelte";
+	let routes = {
+		"/": MainPage,
+		"/auth": Auth,
+		"/event/:id": EventPage,
+	};
 </script>
 
 <main>
-	<Header />
-	<TextImage />
-	<Filters />
-	<Footer />
+	<Router {routes} />
 </main>
-<style>
-	:global(body) {
-        background-color: #7AAE72;
-        color: #1F3E24;
-        transition: background-color 0.3s
-    }
-</style>

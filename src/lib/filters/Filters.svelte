@@ -17,8 +17,6 @@
   let sourceJson = "events";
 
   async function getThings() {
-    console.log(sourceJson);
-
     const res = await fetch(
       `http://innoafisha.pythonanywhere.com/api/v1/` + sourceJson
     );
@@ -38,7 +36,6 @@
   }
 
   let promise = getThings();
-
 </script>
 
 <main>
@@ -54,44 +51,49 @@
       </button>
     {/each}
   </ButtonContainer>
-  
-{#await promise}
-<Spinner />
-{:then getThings}
-<Gallery>
-  {#each events as event, index (event.id)}
-    {#if selected === "all"}
-      <div class="show column">
-        <div class="content">
-          <img src={event['picture']} alt={event['event_name']} style="width:100%" />
-          <h4>{event['event_name']}</h4>
-          <h5>{event['date']}, {event['time']}</h5>
-          <p>{event['location']}</p>
-        </div>
-      </div>
-    {:else}
-      <div class:show={selected === event['type']} class="column">
-        <div class="content">
-          <img src={event['picture']} alt={event['event_name']} style="width:100%" />
-          <h4>{event['event_name']}</h4>
-          <p>{event['date']}, {event['time']}</p>
-          <p>{event['location']}</p>
-        </div>
-      </div>
-    {/if}
-  {/each}
-</Gallery>
 
-<!-- {#each events as event, index (event.id)}
-      <tr>
-        {#each colNames as col}
-          <td>{event[col]}</td>
-        {/each}
-      </tr>
-    {/each}
-{:catch error}
-<p style="color: red">{error.message}</p> -->
-{/await}
+  {#await promise}
+    <Spinner />
+  {:then getThings}
+    <Gallery>
+      {#each events as event, index (event.id)}
+        {#if selected === "all"}
+          <div class="show column">
+            <div class="content">
+              <img
+                src={event["picture"]}
+                alt={event["event_name"]}
+                style="width:100%"
+              />
+              <h4>{event["event_name"]}</h4>
+              <h5>{event["date"]}, {event["time"]}</h5>
+              <p>{event["location"]}</p>
+              <button type="button" name="run_script"
+                ><a href="#/event/{event.id}">Read more...</a></button
+              >
+            </div>
+          </div>
+        {:else}
+          <div class:show={selected === event["type"]} class="column">
+            <div class="content">
+              <img
+                src={event["picture"]}
+                alt={event["event_name"]}
+                style="width:100%"
+              />
+              <h4>{event["event_name"]}</h4>
+              <p>{event["date"]}, {event["time"]}</p>
+              <p>{event["location"]}</p>
+              <button type="button" name="run_script"
+                ><a href="#/event/{event.id}">Read more...</a></button
+              >
+            </div>
+          </div>
+        {/if}
+      {/each}
+    </Gallery>
+
+  {/await}
 </main>
 
 <style>
@@ -105,11 +107,19 @@
     /* 	background-color: red; */
   }
 
-  /* h1 {
-    font-size: 2.8rem;
-    font-weight: 100;
-    margin: 0 0 10px;
-  } */
+  button[name="run_script"] {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 25px;
+    background: #ff9900;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+  }
+  button[name="run_script"]:hover {
+    background: #ff6600;
+  }
 
   h4 {
     font-size: 2rem;

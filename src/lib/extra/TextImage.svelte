@@ -8,10 +8,4 @@
 		background: url(../img/background.webp) center no-repeat;
 		background-size: cover;
 	}
-/* .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
   </style>
