@@ -20,7 +20,7 @@
         if (response.status === 200) {
             axios.defaults.headers.common["Authorization"] = `Token ${response.data.auth_token}`;
             document.cookie=`access_token=${response.data.auth_token}`
-            console.log(document.cookie)
+            console.log(document.cookie.replace(/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/, "$1"))
             await push("/");
         }
     };

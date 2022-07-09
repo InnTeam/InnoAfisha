@@ -109,7 +109,7 @@
       font-size: 20px;
     }
     .title {
-      font-size: 23px;
+      font-size: 30px;
       padding-top: 40px;
     }
     .title::after {

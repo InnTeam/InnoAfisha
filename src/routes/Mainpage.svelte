@@ -3,12 +3,12 @@
 	import TextImage from "../lib/extra/TextImage.svelte";
 	import Filters from "../lib/filters/Filters.svelte";
 	import Footer from "../lib/extra/Footer.svelte";
-	import token from "../lib/Login/FormsLogin.svelte"
 
 	import { onMount } from "svelte";
 	import axios from "axios";
 
 	onMount(async () => {
+		axios.defaults.headers.common["Authorization"] = `Token ${document.cookie.replace(/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/, "$1")}`;
 		const response = await axios.get('https://innoafisha.pythonanywhere.com/api/v1/authusers/');
 
 		if(response.status === 200) {
@@ -26,7 +26,7 @@
 
 <style>
 	:global(body) {
-		background-color: #7aae72;
+		background-color: #c2ecbf;
 		color: #1f3e24;
 		transition: background-color 0.3s;
 	}
