@@ -1,8 +1,0 @@
-.DS_Store
-node_modules
-/public/build
-/.svelte-kit
-/package
-.env
-.env.*
-.rollup.config.js
