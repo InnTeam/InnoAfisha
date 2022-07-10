@@ -10,7 +10,6 @@
     $: loginForm = async () => {
         await push("#/auth");
         location.reload();
-        await push("#/auth");
     };
 </script>
 
@@ -40,7 +39,9 @@
                 <button
                     type="loginForm"
                     class="btnLogin"
-                    on:click={loginForm()}
+                    on:click={() => {
+                        loginForm();
+                    }}
                     style="text-decoration: none; border: none"
                 >
                     <!-- svelte-ignore a11y-missing-attribute -->
@@ -54,7 +55,9 @@
                 <button
                     type="logoutFrom"
                     class="btnLogout"
-                    on:click={logoutFrom()}
+                    on:click={() => {
+                        logoutFrom();
+                    }}
                     style="text-decoration: none; border: none"
                 >
                     <!-- svelte-ignore a11y-missing-attribute -->

@@ -95,7 +95,9 @@
               <button
                 type="addFavEvent"
                 class="bLikedEv"
-                on:click={addFavEvent(event.id)}
+                on:click={() => {
+                  addFavEvent(event.id);
+                }}
               >
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <img class="likedEv" src="img/favorite.png" />
@@ -118,7 +120,9 @@
               <button
                 type="addFavEvent"
                 class="bLikedEv"
-                on:click={addFavEvent(event.id)}
+                on:click={() => {
+                  addFavEvent(event.id);
+                }}
               >
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <img class="likedEv" src="img/favorite.png" />
@@ -132,6 +136,12 @@
 </main>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+  h4,
+  p,
+  h5 {
+    font-family: "Merriweather Sans", sans-serif;
+  }
   main {
     max-width: 100vw;
     display: flex;

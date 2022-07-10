@@ -14,16 +14,15 @@
       /(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
       "$1"
     )}`;
-    let res = await axios.get(
-      "https://innoafisha.pythonanywhere.com/api/v1/favourites"
-    ).catch(async () => {
+    let res = await axios
+      .get("https://innoafisha.pythonanywhere.com/api/v1/favourites")
+      .catch(async () => {
         await push("#/auth");
         location.reload();
-    });
+      });
     eventsIds = res.data;
     res = await axios.get(`http://innoafisha.pythonanywhere.com/api/v1/events`);
     events = res.data;
-    
   }
   let promise = getThings();
 </script>
@@ -35,34 +34,35 @@
   {:then getThings}
     <Gallery>
       {#each eventsIds as eventId, index (eventId.id)}
-      {#each events as event, index (event.id)}
-      {#if event.id === eventId["event"]}
-          <div class="show column">
-            <a class="pickpick" href="#/event/{event.id}">
-            <div class="content">
-              <img
-                src={event["picture"]}
-                alt={event["event_name"]}
-                style="width:100%"
-              />
-              <h4>{event["event_name"]}</h4>
-              <h5>{event["date"]}, {event["time"]}</h5>
-              <p>{event["location"]}</p>
-              <!-- <a class="pickpick" href="#/event/{event.id}"
+        {#each events as event, index (event.id)}
+          {#if event.id === eventId["event"]}
+            <div class="show column">
+              <a class="pickpick" href="#/event/{event.id}">
+                <div class="content">
+                  <img
+                    src={event["picture"]}
+                    alt={event["event_name"]}
+                    style="width:100%"
+                  />
+                  <h4>{event["event_name"]}</h4>
+                  <h5>{event["date"]}, {event["time"]}</h5>
+                  <p>{event["location"]}</p>
+                  <!-- <a class="pickpick" href="#/event/{event.id}"
                 ><button type="button" name="run_script">Read More...</button
                 ></a
               > -->
+                </div>
+              </a>
             </div>
-          </div>
           {/if}
-      {/each}
+        {/each}
       {/each}
     </Gallery>
   {/await}
 </main>
 
 <style>
-    main {
+  main {
     max-width: 100vw;
     display: flex;
     flex-direction: column;
@@ -75,11 +75,10 @@
     bottom: 0px;
     text-decoration: none;
     color: #1f3e24;
-    
   }
 
-  .pickpick:hover{
-   opacity: 0.8; 
+  .pickpick:hover {
+    opacity: 0.8;
   }
 
   h4 {
