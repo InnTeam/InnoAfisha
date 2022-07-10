@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Forms from "../lib/Login/Forms.svelte";
-	import FormsLogin from "../lib/Login/FormsLogin.svelte";
-	import Panels from "../lib/Login/Panels.svelte";
+	import Forms from "../lib/loginpage/Forms.svelte";
+	import FormsLogin from "../lib/loginpage/FormsLogin.svelte";
+	import Panels from "../lib/loginpage/Panels.svelte";
 </script>
 
 <main>

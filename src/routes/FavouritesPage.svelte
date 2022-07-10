@@ -11,13 +11,15 @@
 </script>
 
 <main>
-	<Header />
-    <Favourites/>
-	<Footer />
+	<body>
+		<Header />
+		<Favourites/>
+		<Footer />
+	</body>
 </main>
 
 <style>
-	:global(body) {
+	body {
 		background-color: #c2ecbf;
 		color: #1f3e24;
 		transition: background-color 0.3s;

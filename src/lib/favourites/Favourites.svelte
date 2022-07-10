@@ -1,6 +1,6 @@
 <script>
-  import Gallery from "./Gallery.svelte";
-  import Spinner from "./spinner.svelte";
+  import Gallery from "../extra/services/Gallery.svelte";
+  import Spinner from "../extra/services/spinner.svelte";
   import axios from "axios";
   import { push } from "svelte-spa-router";
 
@@ -19,7 +19,6 @@
     ).catch(async () => {
         await push("#/auth");
         location.reload();
-        await push("#/auth");
     });
     eventsIds = res.data;
     res = await axios.get(`http://innoafisha.pythonanywhere.com/api/v1/events`);

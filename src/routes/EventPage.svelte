@@ -1,7 +1,7 @@
 <script lang="ts">
   import Header from "../lib/extra/Header.svelte";
   import Footer from "../lib/extra/Footer.svelte";
-  import Spinner from "../lib/filters/spinner.svelte";
+  import Spinner from "../lib/extra/services/spinner.svelte";
   export let params;
   let event = [];
   async function getEvent() {

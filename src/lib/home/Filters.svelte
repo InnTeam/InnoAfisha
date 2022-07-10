@@ -1,6 +1,6 @@
 <script lang="ts">
-  import ButtonContainer from "./ButtonContainer.svelte";
-  import Gallery from "./Gallery.svelte";
+  import ButtonContainer from "../extra/services/ButtonContainer.svelte";
+  import Gallery from "../extra/services/Gallery.svelte";
   import axios from "axios";
   import { push } from "svelte-spa-router";
   const types = ["all", "IT", "music", "culture", "cinema", "sport", "other"];
@@ -9,7 +9,7 @@
 
   const filterSelection = (e) => (selected = e.target.dataset.name);
 
-  import Spinner from "./spinner.svelte";
+  import Spinner from "../extra/services/spinner.svelte";
 
   let events = [];
   let colNames = [];
@@ -24,7 +24,6 @@
     if (res.ok) {
       setTimeout(() => {
         events = json;
-        //grab column names
         colNames = Object.keys(events[0]);
 
         return true;
@@ -55,7 +54,6 @@
     ).catch(async () => {
         await push("#/auth");
         location.reload();
-        await push("#/auth");
     });
   };
 </script>

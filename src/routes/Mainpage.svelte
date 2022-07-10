@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Header from "../lib/extra/Header.svelte";
-	import TextImage from "../lib/extra/TextImage.svelte";
-	import Filters from "../lib/filters/Filters.svelte";
+	import TextImage from "../lib/extra/services/TextImage.svelte";
+	import Filters from "../lib/home/Filters.svelte";
 	import Footer from "../lib/extra/Footer.svelte";
 
 	import { onMount } from "svelte";
@@ -21,14 +21,16 @@
 </script>
 
 <main>
-	<Header />
-	<TextImage />
-	<Filters />
-	<Footer />
+	<body>
+		<Header />
+		<TextImage />
+		<Filters />
+		<Footer />
+	</body>
 </main>
 
 <style>
-	:global(body) {
+	body {
 		background-color: #c2ecbf;
 		color: #1f3e24;
 		transition: background-color 0.3s;
