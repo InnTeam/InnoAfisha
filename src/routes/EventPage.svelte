@@ -2,7 +2,6 @@
 	import Header from "../lib/extra/Header.svelte";
 	import Footer from "../lib/extra/Footer.svelte";
 	import EventLoad from "../lib/event/eventLoad.svelte";
-	import Router from "svelte-spa-router";
 	export let params;
 </script>
 

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Header from "../lib/extra/Header.svelte";
-	import Router from "svelte-spa-router";
 	import TextImage from "../lib/extra/services/TextImage.svelte";
 	import Filters from "../lib/home/Filters.svelte";
 	import Footer from "../lib/extra/Footer.svelte";
