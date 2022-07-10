@@ -41,7 +41,7 @@
       /(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
       "$1"
     )}`;
-    const response = await axios.post(
+    await axios.post(
       "https://innoafisha.pythonanywhere.com/api/v1/favourites",
       {
         event: id,
