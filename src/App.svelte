@@ -8,7 +8,7 @@
 		"/": MainPage,
 		"/auth": Auth,
 		"/event/:id": EventPage,
-		"/favourites": FavouritesPage
+		"/favourites": FavouritesPage,
 	};
 </script>
 

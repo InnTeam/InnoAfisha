@@ -1,6 +1,6 @@
 <script lang="ts">
     import Spinner from "../extra/services/spinner.svelte";
-    export let params = ''; 
+    export let params = "";
     let event = [];
     async function getEvent() {
         const res = await fetch(

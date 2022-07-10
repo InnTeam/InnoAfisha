@@ -1,10 +1,9 @@
+<div id="myBtnContainer">
+	<slot />
+</div>
+
 <style>
 	#myBtnContainer {
 		margin-bottom: 1rem;
 	}
 </style>
-
-
-<div id="myBtnContainer">
-	<slot></slot>
-</div>

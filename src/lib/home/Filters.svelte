@@ -34,27 +34,29 @@
   let promise = getThings();
 
   $: addFavEvent = async (id) => {
-    console.log('Aboba')
+    console.log("Aboba");
     axios.defaults.headers.common[
       "Authorization"
     ] = `Token ${document.cookie.replace(
       /(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
       "$1"
     )}`;
-    await axios.post(
-      "https://innoafisha.pythonanywhere.com/api/v1/favourites",
-      {
-        event: id,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
+    await axios
+      .post(
+        "https://innoafisha.pythonanywhere.com/api/v1/favourites",
+        {
+          event: id,
         },
-      }
-    ).catch(async () => {
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .catch(async () => {
         await push("#/auth");
         location.reload();
-    });
+      });
   };
 </script>
 
