@@ -12,10 +12,10 @@
 			"Authorization"
 		] = `Token ${document.cookie.replace(
 			/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
-			"$1"
+			"$1",
 		)}`;
 		await axios.get(
-			"https://innoafisha.pythonanywhere.com/api/v1/authusers/"
+			"https://innoafisha.pythonanywhere.com/api/v1/authusers/",
 		);
 	});
 </script>

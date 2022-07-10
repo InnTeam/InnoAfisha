@@ -10,7 +10,7 @@
 			"Authorization"
 		] = `Token ${document.cookie.replace(
 			/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
-			"$1"
+			"$1",
 		)}`;
 	});
 </script>
