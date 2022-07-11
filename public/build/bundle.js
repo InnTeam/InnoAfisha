@@ -3004,7 +3004,7 @@ var app = (function (exports) {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			attr_dev(div, "class", "title svelte-1uzg0ua");
+    			attr_dev(div, "class", "title svelte-ynmukb");
     			add_location(div, file$b, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -5900,36 +5900,36 @@ var app = (function (exports) {
     			t7 = space();
     			input3 = element("input");
     			attr_dev(h2, "class", "titleA svelte-1a17ukn");
-    			add_location(h2, file$6, 25, 1, 714);
+    			add_location(h2, file$6, 24, 1, 685);
     			attr_dev(i0, "class", "fas fa-user");
-    			add_location(i0, file$6, 27, 2, 777);
+    			add_location(i0, file$6, 26, 2, 748);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "Username");
-    			add_location(input0, file$6, 28, 2, 806);
+    			add_location(input0, file$6, 27, 2, 777);
     			attr_dev(div0, "class", "input-field svelte-1a17ukn");
-    			add_location(div0, file$6, 26, 1, 748);
+    			add_location(div0, file$6, 25, 1, 719);
     			attr_dev(i1, "class", "fas fa-envelope");
-    			add_location(i1, file$6, 31, 2, 913);
+    			add_location(i1, file$6, 30, 2, 884);
     			attr_dev(input1, "type", "email");
     			attr_dev(input1, "placeholder", "Email");
-    			add_location(input1, file$6, 32, 2, 946);
+    			add_location(input1, file$6, 31, 2, 917);
     			attr_dev(div1, "class", "input-field svelte-1a17ukn");
-    			add_location(div1, file$6, 30, 1, 884);
+    			add_location(div1, file$6, 29, 1, 855);
     			attr_dev(i2, "class", "fas fa-lock");
-    			add_location(i2, file$6, 35, 2, 1049);
+    			add_location(i2, file$6, 34, 2, 1020);
     			attr_dev(input2, "type", "password");
     			attr_dev(input2, "placeholder", "Password");
-    			add_location(input2, file$6, 36, 2, 1078);
+    			add_location(input2, file$6, 35, 2, 1049);
     			attr_dev(div2, "class", "input-field svelte-1a17ukn");
-    			add_location(div2, file$6, 34, 1, 1020);
+    			add_location(div2, file$6, 33, 1, 991);
     			attr_dev(input3, "type", "submit");
     			attr_dev(input3, "class", "btnA");
     			input3.value = "Sign up";
     			attr_dev(input3, "id", "sign-inin-btn");
-    			add_location(input3, file$6, 38, 1, 1160);
+    			add_location(input3, file$6, 37, 1, 1131);
     			attr_dev(form, "action", "#");
     			attr_dev(form, "class", "sign-up-form svelte-1a17ukn");
-    			add_location(form, file$6, 24, 0, 639);
+    			add_location(form, file$6, 23, 0, 610);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6352,7 +6352,7 @@ var app = (function (exports) {
     			div3 = element("div");
     			div2 = element("div");
     			h11 = element("h1");
-    			h11.textContent = "Innopolis Afisha";
+    			h11.textContent = "InnopolisAfisha";
     			t8 = space();
     			p1 = element("p");
     			p1.textContent = "Sign in and select your favorite events!";
@@ -6379,16 +6379,16 @@ var app = (function (exports) {
     			set_style(h11, "font-size", "3rem");
     			add_location(h11, file$4, 11, 3, 400);
     			attr_dev(p1, "class", "svelte-c3zvvr");
-    			add_location(p1, file$4, 12, 3, 454);
+    			add_location(p1, file$4, 12, 3, 453);
     			attr_dev(button1, "class", "btnA transparent");
     			attr_dev(button1, "id", "sign-in-btn");
-    			add_location(button1, file$4, 13, 3, 506);
+    			add_location(button1, file$4, 13, 3, 505);
     			attr_dev(div2, "class", "content");
     			add_location(div2, file$4, 10, 2, 374);
     			if (!src_url_equal(img1.src, img1_src_value = "img/register.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "class", "image svelte-c3zvvr");
     			attr_dev(img1, "alt", "");
-    			add_location(img1, file$4, 15, 2, 588);
+    			add_location(img1, file$4, 15, 2, 587);
     			attr_dev(div3, "class", "panel right-panel");
     			add_location(div3, file$4, 9, 1, 339);
     			attr_dev(div4, "class", "panels-container svelte-c3zvvr");

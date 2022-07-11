@@ -9,7 +9,7 @@
 	</div>
 	<div class="panel right-panel">
 		<div class="content">
-			<h1 style="font-size: 3rem">Innopolis Afisha</h1>
+			<h1 style="font-size: 3rem">InnopolisAfisha</h1>
 			<p>Sign in and select your favorite events!</p>
 			<button class="btnA transparent" id="sign-in-btn"> Sign in </button>
 		</div>

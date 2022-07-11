@@ -1,6 +1,5 @@
 <script lang="ts">
 	import axios from "axios";
-	import { push } from "svelte-spa-router";
 
 	let username = "",
 		email = "",

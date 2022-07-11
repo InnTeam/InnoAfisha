@@ -8,15 +8,21 @@
 		"start": "sirv public --no-clear",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
-		"format": "prettier --write --plugin-search-dir=. ."
+		"format": "prettier --write --plugin-search-dir=. .",
+		"test": "jest --watch"
 	},
 	"devDependencies": {
+		"@babel/preset-env": "^7.18.6",
 		"@rollup/plugin-commonjs": "^17.0.0",
 		"@rollup/plugin-node-resolve": "^11.0.0",
 		"@rollup/plugin-typescript": "^8.3.3",
+		"@testing-library/jest-dom": "^5.16.4",
+		"@testing-library/svelte": "^3.1.3",
+		"@testing-library/user-event": "^14.2.1",
 		"@tsconfig/svelte": "^2.0.1",
 		"@typescript-eslint/eslint-plugin": "^5.30.5",
 		"@typescript-eslint/parser": "^5.30.5",
+		"babel-jest": "^26.6.3",
 		"eslint": "^8.2.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-prettier": "^8.5.0",
@@ -24,6 +30,7 @@
 		"eslint-plugin-jsx-a11y": "^6.5.1",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"jest": "^26.6.3",
 		"prettier": "^2.7.1",
 		"prettier-plugin-svelte": "^2.7.0",
 		"rollup": "^2.3.4",
@@ -33,6 +40,7 @@
 		"rollup-plugin-terser": "^7.0.0",
 		"svelte": "^3.0.0",
 		"svelte-check": "^2.0.0",
+		"svelte-jester": "^2.3.2",
 		"svelte-preprocess": "^4.0.0",
 		"tslib": "^2.0.0",
 		"typescript": "^4.0.0"
@@ -42,5 +50,11 @@
 		"eslint-config-airbnb-typescript": "^17.0.0",
 		"sirv-cli": "^2.0.0",
 		"svelte-spa-router": "^3.2.0"
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.svelte$": "svelte-jester", 
+			"^.+\\.js$": "babel-jest"
+		}
 	}
 }
