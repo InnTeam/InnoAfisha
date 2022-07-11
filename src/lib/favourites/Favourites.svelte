@@ -65,6 +65,12 @@
 				{/each}
 			{/each}
 		</Gallery>
+			<dev class="nothingHere">
+				<h1>
+					Oops, there's nothing here... Like the events if you want to
+					see more...
+				</h1>
+			</dev>
 	{/await}
 </main>
 
@@ -75,12 +81,23 @@
 	p {
 		font-family: "Merriweather Sans", sans-serif;
 	}
+
+	h1 {
+		margin-top: 20px;
+	}
 	main {
 		max-width: 100vw;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.nothingHere {
+		width: auto;
+		height: 500px;
+		display: flex;
+		align-items: center;
 	}
 
 	.pickpick {

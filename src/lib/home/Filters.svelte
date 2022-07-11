@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ButtonContainer from "../extra/services/ButtonContainer.svelte";
 	import Gallery from "../extra/services/Gallery.svelte";
+	import eventFev from "../../main";
 	import axios from "axios";
 	import { push } from "svelte-spa-router";
 	const types = ["all", "IT", "music", "culture", "cinema", "sport", "other"];
@@ -40,7 +41,7 @@
 			/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
 			"$1",
 		)}`;
-		await axios
+		const responseFav = await axios
 			.post(
 				"https://innoafisha.pythonanywhere.com/api/v1/favourites",
 				{
@@ -52,6 +53,9 @@
 					},
 				},
 			)
+			.then((res) => {
+				eventFev[res.data.event] = res.data.id;
+			})
 			.catch(async () => {
 				await push("#/auth");
 				location.reload();
@@ -59,7 +63,7 @@
 	};
 
 	async function deleteFavEvent(id) {
-		let sourceDelete = id;
+		let sourceDelete = eventFev[id];
 
 		axios.defaults.headers.common[
 			"Authorization"
@@ -124,9 +128,19 @@
 									}}
 								>
 									<!-- svelte-ignore a11y-missing-attribute -->
+									<img class="likedEv" src="img/liked.svg" />
+								</button>
+								<button
+									type="addFavEvent"
+									class="bLikedEv"
+									on:click={() => {
+										deleteFavEvent(event.id);
+									}}
+								>
+									<!-- svelte-ignore a11y-missing-attribute -->
 									<img
 										class="likedEv"
-										src="img/heartUnliked.svg"
+										src="img/dislike.svg"
 									/>
 								</button>
 							</div>
@@ -160,6 +174,19 @@
 									class="bLikedEv"
 									on:click={() => {
 										addFavEvent(event.id);
+									}}
+								>
+									<!-- svelte-ignore a11y-missing-attribute -->
+									<img
+										class="likedEv"
+										src="img/heartLiked.svg"
+									/>
+								</button>
+								<button
+									type="addFavEvent"
+									class="bLikedEv"
+									on:click={() => {
+										deleteFavEvent(event.id);
 									}}
 								>
 									<!-- svelte-ignore a11y-missing-attribute -->
