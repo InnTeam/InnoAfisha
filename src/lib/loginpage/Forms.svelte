@@ -1,5 +1,6 @@
 <script lang="ts">
 	import axios from "axios";
+	import { push } from "svelte-spa-router";
 
 	let username = "",
 		email = "",
@@ -39,12 +40,12 @@
 	<div class="input-field">
 		<i class="fas fa-envelope" />
 		<input bind:value={email} type="email" placeholder="Email" />
-	</div>
+	</div>	
 	<div class="input-field">
 		<i class="fas fa-lock" />
 		<input bind:value={password} type="password" placeholder="Password" />
 	</div>
-	<input type="submit" class="btnA" value="Sign up" />
+	<input type="submit" class="btnA" value="Sign up" id="sign-inin-btn" />
 </form>
 
 <style>

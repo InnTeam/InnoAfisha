@@ -21,7 +21,6 @@
 				"Authorization"
 			] = `Token ${response.data.auth_token}`;
 			document.cookie = `access_token=${response.data.auth_token}`;
-			console.log("Aboba");
 			await push("/");
 		}
 	};

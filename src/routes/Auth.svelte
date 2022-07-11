@@ -1,4 +1,6 @@
 <script lang="ts">
+import { loop_guard } from "svelte/internal";
+
 	import Forms from "../lib/loginpage/Forms.svelte";
 	import FormsLogin from "../lib/loginpage/FormsLogin.svelte";
 	import Panels from "../lib/loginpage/Panels.svelte";
@@ -19,6 +21,7 @@
 		if (true) {
 			const sign_in_btn = document.querySelector("#sign-in-btn");
 			const sign_up_btn = document.querySelector("#sign-up-btn");
+			const sign_inin_btn = document.querySelector("#sign-inin-btn");
 			const containerA: HTMLElement =
 				document.querySelector(".containerA");
 			sign_up_btn.addEventListener("click", () => {
@@ -27,11 +30,17 @@
 			sign_in_btn.addEventListener("click", () => {
 				containerA.classList.remove("sign-up-mode");
 			});
+			sign_inin_btn.addEventListener("click", () => {
+				containerA.classList.remove("sign-up-mode");
+			});
 		} else {
 			sign_up_btn.addEventListener("click", () => {
 				containerA.classList.add("sign-up-mode");
 			});
 			sign_in_btn.addEventListener("click", () => {
+				containerA.classList.remove("sign-up-mode");
+			});
+			sign_inin_btn.addEventListener("click", () => {
 				containerA.classList.remove("sign-up-mode");
 			});
 		}
