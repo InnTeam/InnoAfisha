@@ -179,7 +179,7 @@
 									<!-- svelte-ignore a11y-missing-attribute -->
 									<img
 										class="likedEv"
-										src="img/heartLiked.svg"
+										src="img/liked.svg"
 									/>
 								</button>
 								<button
@@ -192,7 +192,7 @@
 									<!-- svelte-ignore a11y-missing-attribute -->
 									<img
 										class="likedEv"
-										src="img/heartUnliked.svg"
+										src="img/dislike.svg"
 									/>
 								</button>
 							</div>
