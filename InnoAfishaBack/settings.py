@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'djoser',
     'event',
-    'favourite'
+    'favourite',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
