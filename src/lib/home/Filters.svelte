@@ -324,7 +324,6 @@
 		margin: 30px 10px;
 		margin-bottom: 0;
 		transition: 0.1s ease-in-out;
-		text-transform: uppercase;
 	}
 
 	.btn:hover {

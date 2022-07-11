@@ -18,6 +18,11 @@
 </div>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+	p{
+		font-family: 'Merriweather Sans', sans-serif;
+		font-size: 20px;
+	}
 	.panels-container {
 		position: absolute;
 		height: 100%;

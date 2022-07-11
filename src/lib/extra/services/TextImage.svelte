@@ -1,7 +1,7 @@
 <div class="title">
-	<div class="containerTitle">
+	<!-- <div class="containerTitle">
 		<button class="centered">Innopolis Afisha</button>
-	</div>
+	</div> -->
 </div>
 
 <style>
@@ -12,7 +12,7 @@
 		background-size: cover;
 	}
 
-	.containerTitle {
+	/* .containerTitle {
 		color: #c2ecbf;
 		display: flex;
 		padding: 100px;
@@ -30,5 +30,5 @@
 		border: 0;
 		font-size: 80px;
 		color: white;
-	}
+	} */
 </style>
