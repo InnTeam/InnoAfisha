@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Spinner from "../extra/services/spinner.svelte";
-	import Router from "svelte-spa-router";
 	export let params = "";
 	let event = [];
 	async function getEvent() {

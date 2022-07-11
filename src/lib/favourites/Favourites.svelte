@@ -39,22 +39,27 @@
 				{#each events as event, index (event.id)}
 					{#if event.id === eventId["event"]}
 						<div class="show column">
-							<a class="pickpick" href="#/event/{event.id}">
-								<div class="content">
+							<div class="content">
+								<a class="pickpick" href="#/event/{event.id}">
 									<img
 										src={event["picture"]}
-										alt={event["event_name"]}
+										alt=""
 										style="width:100%"
 									/>
-									<h4>{event["event_name"]}</h4>
-									<h5>{event["date"]}, {event["time"]}</h5>
-									<p>{event["location"]}</p>
-									<!-- <a class="pickpick" href="#/event/{event.id}"
-                ><button type="button" name="run_script">Read More...</button
-                ></a
-              > -->
+								</a>
+								<div class="containerName">
+									<center class="imgTitle"
+										><h4>{event["event_name"]}</h4></center
+									>
 								</div>
-							</a>
+								<center>
+									<hr />
+									<div class="descriptInfo">
+										<p>{event["date"]}, {event["time"]}</p>
+										<p>{event["location"]}</p>
+									</div>
+								</center>
+							</div>
 						</div>
 					{/if}
 				{/each}
@@ -64,6 +69,12 @@
 </main>
 
 <style>
+	@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+
+	h4,
+	p {
+		font-family: "Merriweather Sans", sans-serif;
+	}
 	main {
 		max-width: 100vw;
 		display: flex;
@@ -87,15 +98,35 @@
 		font-size: 2rem;
 		margin: 0;
 	}
-	h5 {
-		font-size: 1.2rem;
-		margin: 0;
-	}
 
 	p {
 		margin: 0 0 0.5rem;
 		font-size: 1.2rem;
 		position: relative;
+	}
+
+	.imgTitle {
+		padding-top: 15px;
+	}
+
+	.containerName {
+		display: grid;
+		align-items: center;
+		width: auto;
+		height: 120px;
+	}
+
+	hr {
+		margin-top: 15px;
+		border: none; /* Убираем границу */
+		background-color: #b3caaf; /* Цвет линии */
+		color: #b3caaf; /* Цвет линии для IE6-7 */
+		height: 2px; /* Толщина линии */
+		width: 400px;
+	}
+
+	.descriptInfo {
+		padding-top: 20px;
 	}
 
 	.column {

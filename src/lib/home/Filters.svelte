@@ -34,7 +34,6 @@
 	let promise = getThings();
 
 	$: addFavEvent = async (id) => {
-		console.log("Aboba");
 		axios.defaults.headers.common[
 			"Authorization"
 		] = `Token ${document.cookie.replace(
@@ -58,6 +57,21 @@
 				location.reload();
 			});
 	};
+
+	async function deleteFavEvent(id) {
+		let sourceDelete = id;
+
+		axios.defaults.headers.common[
+			"Authorization"
+		] = `Token ${document.cookie.replace(
+			/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
+			"$1",
+		)}`;
+		await axios.delete(
+			"https://innoafisha.pythonanywhere.com/api/v1/favourites/" +
+				sourceDelete,
+		);
+	}
 </script>
 
 <main>
@@ -85,23 +99,37 @@
 							<a class="pickpick" href="#/event/{event.id}">
 								<img
 									src={event["picture"]}
-									alt={event["event_name"]}
+									alt=""
 									style="width:100%"
 								/>
 							</a>
-							<h4>{event["event_name"]}</h4>
-							<h5>{event["date"]}, {event["time"]}</h5>
-							<p>{event["location"]}</p>
-							<button
-								type="addFavEvent"
-								class="bLikedEv"
-								on:click={() => {
-									addFavEvent(event.id);
-								}}
-							>
-								<!-- svelte-ignore a11y-missing-attribute -->
-								<img class="likedEv" src="img/favorite.png" />
-							</button>
+							<div class="containerName">
+								<center class="imgTitle"
+									><h4>{event["event_name"]}</h4></center
+								>
+							</div>
+							<center>
+								<hr />
+								<div class="descriptInfo">
+									<p>{event["date"]}, {event["time"]}</p>
+									<p>{event["location"]}</p>
+								</div>
+							</center>
+							<div class="buttonLiked">
+								<button
+									type="addFavEvent"
+									class="bLikedEv"
+									on:click={() => {
+										addFavEvent(event.id);
+									}}
+								>
+									<!-- svelte-ignore a11y-missing-attribute -->
+									<img
+										class="likedEv"
+										src="img/heartUnliked.svg"
+									/>
+								</button>
+							</div>
 						</div>
 					</div>
 				{:else}
@@ -110,23 +138,37 @@
 							<a class="pickpick" href="#/event/{event.id}">
 								<img
 									src={event["picture"]}
-									alt={event["event_name"]}
+									alt=""
 									style="width:100%"
 								/>
 							</a>
-							<h4>{event["event_name"]}</h4>
-							<p>{event["date"]}, {event["time"]}</p>
-							<p>{event["location"]}</p>
-							<button
-								type="addFavEvent"
-								class="bLikedEv"
-								on:click={() => {
-									addFavEvent(event.id);
-								}}
-							>
-								<!-- svelte-ignore a11y-missing-attribute -->
-								<img class="likedEv" src="img/favorite.png" />
-							</button>
+							<div class="containerName">
+								<center class="imgTitle"
+									><h4>{event["event_name"]}</h4></center
+								>
+							</div>
+							<center>
+								<hr />
+								<div class="descriptInfo">
+									<p>{event["date"]}, {event["time"]}</p>
+									<p>{event["location"]}</p>
+								</div>
+							</center>
+							<div class="buttonLiked">
+								<button
+									type="addFavEvent"
+									class="bLikedEv"
+									on:click={() => {
+										addFavEvent(event.id);
+									}}
+								>
+									<!-- svelte-ignore a11y-missing-attribute -->
+									<img
+										class="likedEv"
+										src="img/heartUnliked.svg"
+									/>
+								</button>
+							</div>
 						</div>
 					</div>
 				{/if}
@@ -138,8 +180,7 @@
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 	h4,
-	p,
-	h5 {
+	p {
 		font-family: "Merriweather Sans", sans-serif;
 	}
 	main {
@@ -150,9 +191,37 @@
 		justify-content: center;
 	}
 
+	.imgTitle {
+		padding-top: 15px;
+	}
+
+	.containerName {
+		display: grid;
+		align-items: center;
+		width: auto;
+		height: 120px;
+	}
+
+	hr {
+		margin-top: 15px;
+		border: none; /* Убираем границу */
+		background-color: #b3caaf; /* Цвет линии */
+		color: #b3caaf; /* Цвет линии для IE6-7 */
+		height: 2px; /* Толщина линии */
+		width: 400px;
+	}
+
+	.descriptInfo {
+		padding-top: 20px;
+	}
+
 	.likedEv {
 		width: 30px;
 		height: auto;
+	}
+
+	.buttonLiked {
+		text-align: end;
 	}
 
 	.bLikedEv {
@@ -179,10 +248,6 @@
 		font-size: 2rem;
 		margin: 0;
 	}
-	h5 {
-		font-size: 1.2rem;
-		margin: 0;
-	}
 
 	p {
 		margin: 0 0 0.5rem;
@@ -205,7 +270,6 @@
 		box-shadow: 1px 1px 5px #1f3e24;
 		border-radius: 10px;
 		position: relative;
-		min-height: 620px;
 	}
 
 	img {
