@@ -5,7 +5,7 @@ import Footer from "./Footer.svelte";
 it("has question header", () => {
     render(Footer);
     const header = screen.getByRole("heading", {
-        name: "Contact us if you have any question",
+        name: "Contact us if you have any questions",
     });
     expect(header).toBeInTheDocument();
 });

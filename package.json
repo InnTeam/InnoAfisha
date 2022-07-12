@@ -9,7 +9,7 @@
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
-		"test": "jest --watchAll"
+		"test": "jest --watchAll=false"
 	},
 	"devDependencies": {
 		"@babel/preset-env": "^7.18.6",
