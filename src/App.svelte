@@ -4,6 +4,7 @@
 	import MainPage from "./routes/MainPage.svelte";
 	import Auth from "./routes/Auth.svelte";
 	import FavouritesPage from "./routes/FavouritesPage.svelte";
+
 	let routes = {
 		"/": MainPage,
 		"/auth": Auth,

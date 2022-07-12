@@ -1,7 +1,9 @@
 <script lang="ts">
 	import Spinner from "../extra/services/Spinner.svelte";
+
 	export let params = "";
 	let event = [];
+
 	async function getEvent() {
 		const res = await fetch(
 			`https://innoafisha.pythonanywhere.com/api/v1/events/` + params,
@@ -14,6 +16,7 @@
 			}, 0);
 		}
 	}
+
 	let promise = getEvent();
 </script>
 
@@ -40,9 +43,9 @@
 				<div class="numsite">
 					<div class="line2">
 						<button class="rectangle2">{event["time"]}</button>
-						<a href={event["link"]}
-							><button class="btn">Site</button></a
-						>
+						<a href={event["link"]}>
+							<button class="btn">Site</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -62,15 +65,18 @@
 
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=M+PLUS+2&display=swap");
+
 	.event_pic {
 		border-radius: 11px;
 	}
+
 	.rectangle1 {
 		padding: 10px;
 		background-color: #fff;
 		border-radius: 11px;
 		margin-bottom: 30px;
 	}
+
 	.rectangle2 {
 		font-family: "M PLUS 2", sans-serif;
 		-webkit-appearance: none;
@@ -84,6 +90,7 @@
 		color: #1f3e24;
 		min-width: 150px;
 	}
+
 	.columns {
 		display: flex;
 		column-gap: 40px;
@@ -92,19 +99,23 @@
 		color: #1f3e24;
 		font-family: "M PLUS 2", sans-serif;
 	}
+
 	.col_left {
 		width: 50%;
 		text-align: center;
 		padding-top: 40px;
 	}
+
 	.col_right {
 		text-align: center;
 		font-size: 20px;
 	}
+
 	.title {
 		font-size: 30px;
 		padding-top: 40px;
 	}
+
 	.title::after {
 		content: "";
 		display: block;
@@ -113,18 +124,22 @@
 		background-color: #b3caaf;
 		margin: 15px auto;
 	}
+
 	.dateplace {
 		font-size: 20px;
 	}
+
 	.numsite {
 		font-size: 20px;
 	}
+
 	.description {
 		width: 100%;
 		max-width: 600px;
 		color: #1f3e24;
 		font-size: 25px;
 	}
+
 	.btn {
 		font-family: "M PLUS 2", sans-serif;
 		-webkit-appearance: none;
@@ -138,17 +153,21 @@
 		color: #1f3e24;
 		min-width: 150px;
 	}
+
 	.btn:hover {
 		background: rgb(59, 102, 59);
 		cursor: pointer;
 	}
+
 	.btn:focus {
 		outline: none;
 	}
+
 	.line2 {
 		padding-top: 10px;
 		padding-bottom: 30px;
 	}
+
 	.line1 {
 		padding-top: 30px;
 	}

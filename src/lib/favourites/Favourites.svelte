@@ -26,6 +26,7 @@
 		);
 		events = res.data;
 	}
+
 	let promise = getThings();
 </script>
 
@@ -88,6 +89,7 @@
 	h1 {
 		margin-top: 20px;
 	}
+
 	main {
 		max-width: 100vw;
 		display: flex;

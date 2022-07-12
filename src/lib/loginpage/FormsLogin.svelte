@@ -1,6 +1,7 @@
 <script lang="ts">
 	import axios from "axios";
 	import { push } from "svelte-spa-router";
+
 	let usernameL = "",
 		passwordL = "";
 	$: submit = async () => {
@@ -29,11 +30,11 @@
 <form action="#" class="sign-in-form" on:submit|preventDefault={submit}>
 	<h2 class="titleA">Sign in</h2>
 	<div class="input-field">
-		<i class="fas fa-user" />
+		<i class="fas fa-user"></i>
 		<input bind:value={usernameL} type="text" placeholder="Username" />
 	</div>
 	<div class="input-field">
-		<i class="fas fa-lock" />
+		<i class="fas fa-lock"></i>
 		<input bind:value={passwordL} type="password" placeholder="Password" />
 	</div>
 	<input type="submit" value="Login" class="btnA solid" />

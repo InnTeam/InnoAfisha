@@ -36,6 +36,7 @@
 
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+
 	ul {
 		padding-left: 0;
 		color: #b7b7b7;
@@ -45,10 +46,12 @@
 		background: #111111;
 		padding-top: 45px;
 	}
+
 	.footer-widget {
 		margin-left: 50px;
 		margin-bottom: 30px;
 	}
+
 	.footer-widget h6 {
 		color: #ffffff;
 		font-size: 15px;
@@ -57,10 +60,12 @@
 		letter-spacing: 2px;
 		margin-bottom: 20px;
 	}
+
 	.footer-widget ul li {
 		line-height: 36px;
 		list-style: none;
 	}
+
 	.footer-widget .footer-newslatter p {
 		color: #ffffff;
 	}
@@ -72,10 +77,12 @@
 		margin-top: 40px;
 		font-family: "Merriweather Sans", sans-serif;
 	}
+
 	.footer-copyright-text p {
 		color: #b7b7b7;
 		margin-bottom: 0;
 	}
+
 	li {
 		font-family: "Merriweather Sans", sans-serif;
 	}

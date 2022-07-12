@@ -4,7 +4,7 @@
 	export let unit = "px";
 </script>
 
-<div class="circle" style="--size: {size}{unit}; --color: {color};" />
+<div class="circle" style="--size: {size}{unit}; --color: {color};"></div>
 
 <style>
 	.circle {
@@ -18,6 +18,7 @@
 		animation: 0.75s linear 0s infinite normal none running rotate;
 		margin: auto;
 	}
+
 	@keyframes rotate {
 		0% {
 			transform: rotate(0);
