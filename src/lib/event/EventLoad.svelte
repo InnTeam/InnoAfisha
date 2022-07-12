@@ -4,14 +4,14 @@
 	let event = [];
 	async function getEvent() {
 		const res = await fetch(
-			`http://innoafisha.pythonanywhere.com/api/v1/events/` + params,
+			`https://innoafisha.pythonanywhere.com/api/v1/events/` + params,
 		);
 		const json = await res.json();
 		if (res.ok) {
 			setTimeout(() => {
 				event = json;
 				return true;
-			}, 0 * Math.random());
+			}, 0);
 		}
 	}
 	let promise = getEvent();
@@ -29,6 +29,7 @@
 					src={event["picture"]}
 					width="373px"
 					height="373px"
+					alt="event"
 				/>
 				<div class="dateplace">
 					<div class="line1">

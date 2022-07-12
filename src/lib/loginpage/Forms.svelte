@@ -39,7 +39,7 @@
 	<div class="input-field">
 		<i class="fas fa-envelope" />
 		<input bind:value={email} type="email" placeholder="Email" />
-	</div>	
+	</div>
 	<div class="input-field">
 		<i class="fas fa-lock" />
 		<input bind:value={password} type="password" placeholder="Password" />
@@ -53,7 +53,7 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		padding: 0rem 5rem;
+		padding: 0 5rem;
 		transition: all 0.2s 0.7s;
 		overflow: hidden;
 		grid-column: 1 / 2;

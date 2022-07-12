@@ -33,7 +33,12 @@
 				style="text-decoration: none; color: #4E7149"
 			>
 				<!-- svelte-ignore a11y-missing-attribute -->
-				<img src="img/favourite.png" width="30px" height="auto" /></a
+				<img
+					src="img/favourite.png"
+					width="30px"
+					height="auto"
+					alt="favourite"
+				/></a
 			>
 			{#if !document.cookie}
 				<button
@@ -49,6 +54,7 @@
 						src="img/logout.svg"
 						width="28px"
 						height="auto"
+						alt="logout"
 					/></button
 				>
 			{:else}
@@ -65,6 +71,7 @@
 						src="img/login.png"
 						width="19px"
 						height="auto"
+						alt="login"
 					/></button
 				>
 			{/if}
@@ -103,8 +110,6 @@
 	}
 
 	.corner {
-		width: 3em;
-		height: 3em;
 		display: flex;
 		align-items: center;
 		justify-content: center;

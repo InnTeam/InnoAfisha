@@ -4,13 +4,13 @@
 	import eventFev from "../../main";
 	import axios from "axios";
 	import { push } from "svelte-spa-router";
+	import Spinner from "../extra/services/Spinner.svelte";
+
 	const types = ["all", "IT", "music", "culture", "cinema", "sport", "other"];
 
 	let selected = "all";
 
 	const filterSelection = (e) => (selected = e.target.dataset.name);
-
-	import Spinner from "../extra/services/spinner.svelte";
 
 	let events = [];
 	let colNames = [];
@@ -18,7 +18,7 @@
 
 	async function getThings() {
 		const res = await fetch(
-			`http://innoafisha.pythonanywhere.com/api/v1/` + sourceJson,
+			`https://innoafisha.pythonanywhere.com/api/v1/` + sourceJson,
 		);
 		const json = await res.json();
 
@@ -28,7 +28,7 @@
 				colNames = Object.keys(events[0]);
 
 				return true;
-			}, 0 * Math.random());
+			}, 0);
 		}
 	}
 
@@ -41,7 +41,7 @@
 			/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
 			"$1",
 		)}`;
-		const responseFav = await axios
+		await axios
 			.post(
 				"https://innoafisha.pythonanywhere.com/api/v1/favourites",
 				{
@@ -108,17 +108,20 @@
 								/>
 							</a>
 							<div class="containerName">
-								<center class="imgTitle"
-									><h4>{event["event_name"]}</h4></center
+								<div
+									class="imgTitle"
+									style="text-align: center;"
 								>
+									<h4>{event["event_name"]}</h4>
+								</div>
 							</div>
-							<center>
+							<div style="text-align: center;">
 								<hr />
 								<div class="descriptInfo">
 									<p>{event["date"]}, {event["time"]}</p>
 									<p>{event["location"]}</p>
 								</div>
-							</center>
+							</div>
 							<div class="buttonLiked">
 								<button
 									type="addFavEvent"
@@ -128,7 +131,11 @@
 									}}
 								>
 									<!-- svelte-ignore a11y-missing-attribute -->
-									<img class="likedEv" src="img/liked.svg" />
+									<img
+										class="likedEv"
+										src="img/liked.svg"
+										alt="like"
+									/>
 								</button>
 								<button
 									type="addFavEvent"
@@ -141,6 +148,7 @@
 									<img
 										class="likedEv"
 										src="img/dislike.svg"
+										alt="dislike"
 									/>
 								</button>
 							</div>
@@ -157,17 +165,20 @@
 								/>
 							</a>
 							<div class="containerName">
-								<center class="imgTitle"
-									><h4>{event["event_name"]}</h4></center
+								<div
+									class="imgTitle"
+									style="text-align: center;"
 								>
+									<h4>{event["event_name"]}</h4>
+								</div>
 							</div>
-							<center>
+							<div style="text-align: center;">
 								<hr />
 								<div class="descriptInfo">
 									<p>{event["date"]}, {event["time"]}</p>
 									<p>{event["location"]}</p>
 								</div>
-							</center>
+							</div>
 							<div class="buttonLiked">
 								<button
 									type="addFavEvent"
@@ -180,6 +191,7 @@
 									<img
 										class="likedEv"
 										src="img/liked.svg"
+										alt="like"
 									/>
 								</button>
 								<button
@@ -193,6 +205,7 @@
 									<img
 										class="likedEv"
 										src="img/dislike.svg"
+										alt="dislike"
 									/>
 								</button>
 							</div>
@@ -206,10 +219,12 @@
 
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+
 	h4,
 	p {
 		font-family: "Merriweather Sans", sans-serif;
 	}
+
 	main {
 		max-width: 100vw;
 		display: flex;
@@ -262,7 +277,7 @@
 
 	.pickpick {
 		position: relative;
-		bottom: 0px;
+		bottom: 0;
 		text-decoration: none;
 		color: #1f3e24;
 	}
@@ -321,8 +336,7 @@
 		color: #1f3e24;
 		min-width: 150px;
 		cursor: pointer;
-		margin: 30px 10px;
-		margin-bottom: 0;
+		margin: 30px 10px 0;
 		transition: 0.1s ease-in-out;
 	}
 

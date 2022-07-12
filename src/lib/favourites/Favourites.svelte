@@ -22,7 +22,7 @@
 			});
 		eventsIds = res.data;
 		res = await axios.get(
-			`http://innoafisha.pythonanywhere.com/api/v1/events`,
+			`https://innoafisha.pythonanywhere.com/api/v1/events`,
 		);
 		events = res.data;
 	}
@@ -48,29 +48,32 @@
 									/>
 								</a>
 								<div class="containerName">
-									<center class="imgTitle"
-										><h4>{event["event_name"]}</h4></center
+									<div
+										class="imgTitle"
+										style="text-align: center;"
 									>
+										<h4>{event["event_name"]}</h4>
+									</div>
 								</div>
-								<center>
+								<div style="text-align: center;">
 									<hr />
 									<div class="descriptInfo">
 										<p>{event["date"]}, {event["time"]}</p>
 										<p>{event["location"]}</p>
 									</div>
-								</center>
+								</div>
 							</div>
 						</div>
 					{/if}
 				{/each}
 			{/each}
 		</Gallery>
-			<div class="nothingHere">
-				<h1>
-					Oops, there's nothing here... Like the events if you want to
-					see more...
-				</h1>
-			</div>
+		<div class="nothingHere">
+			<h1>
+				Oops, there's nothing here... Like the events if you want to see
+				more...
+			</h1>
+		</div>
 	{/await}
 </main>
 
@@ -102,7 +105,7 @@
 
 	.pickpick {
 		position: relative;
-		bottom: 0px;
+		bottom: 0;
 		text-decoration: none;
 		color: #1f3e24;
 	}

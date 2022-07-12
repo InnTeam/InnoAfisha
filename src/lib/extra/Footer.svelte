@@ -35,7 +35,7 @@
 </footer>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+	@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 	ul {
 		padding-left: 0;
 		color: #b7b7b7;
@@ -70,13 +70,13 @@
 		padding: 20px 0;
 		margin-left: 50px;
 		margin-top: 40px;
-		font-family: 'Merriweather Sans', sans-serif;
+		font-family: "Merriweather Sans", sans-serif;
 	}
 	.footer-copyright-text p {
 		color: #b7b7b7;
 		margin-bottom: 0;
 	}
-	li{
-		font-family: 'Merriweather Sans', sans-serif;
+	li {
+		font-family: "Merriweather Sans", sans-serif;
 	}
 </style>

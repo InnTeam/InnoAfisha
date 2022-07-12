@@ -1,5 +1,4 @@
-<div class="title">
-</div>
+<div class="title" />
 
 <style>
 	.title {
