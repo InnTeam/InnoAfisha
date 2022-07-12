@@ -16,9 +16,6 @@
 						event = res.data;
 					}, 0);
 				}
-			})
-			.catch(async () => {
-				location.reload();
 			});
 	}
 

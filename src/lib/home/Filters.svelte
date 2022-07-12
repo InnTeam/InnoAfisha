@@ -72,6 +72,12 @@
 				sourceDelete,
 		);
 	}
+
+	async function goToEvent(idEvent) {
+		let idEventt = idEvent;
+		await push(`#/event/` + idEventt);
+		location.reload();
+	}
 </script>
 
 <main>
@@ -96,13 +102,17 @@
 				{#if selected === "all"}
 					<div class="show column">
 						<div class="content">
-							<a class="pickpick" href="#/event/{event.id}">
-								<img
+							<button
+								class="pickpick"
+								on:click={() => {
+									goToEvent(event.id);
+								}}
+								><img
 									src={event["picture"]}
 									alt=""
 									style="width:100%"
-								/>
-							</a>
+								/></button
+							>
 							<div class="containerName">
 								<div
 									class="imgTitle"
@@ -155,13 +165,17 @@
 				{:else}
 					<div class:show={selected === event["type"]} class="column">
 						<div class="content">
-							<a class="pickpick" href="#/event/{event.id}">
-								<img
+							<button
+								class="pickpick"
+								on:click={() => {
+									goToEvent(event.id);
+								}}
+								><img
 									src={event["picture"]}
 									alt=""
 									style="width:100%"
-								/>
-							</a>
+								/></button
+							>
 							<div class="containerName">
 								<div
 									class="imgTitle"
@@ -262,13 +276,25 @@
 		height: auto;
 	}
 
-	.buttonLiked {
-		text-align: end;
-	}
-
-	.bLikedEv {
+	button.bLikedEv {
 		border: none;
 		background-color: white;
+		transition: 0.2s;
+		border-radius: 10px;
+	}
+
+	button.bLikedEv:hover {
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 10px;
+	}
+
+	button.bLikedEv:active {
+		background: #4e7149;
+		border-radius: 10px;
+	}
+
+	.buttonLiked {
+		text-align: end;
 	}
 
 	.bLikedEv:hover {
@@ -280,6 +306,11 @@
 		bottom: 0;
 		text-decoration: none;
 		color: #1f3e24;
+		width: 100%;
+		border: none;
+		height: 350px;
+		border-radius: 10px;
+		cursor: pointer;
 	}
 
 	.pickpick:hover {
