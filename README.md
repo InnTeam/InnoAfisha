@@ -19,6 +19,10 @@ correctness of the presentation of information, the security and legality of the
 event, etc.
 </p>
 
+## Design
+
+!(https://github.com/InnTeam/InnoAfisha/frontEnd/forReadme/1.png)
+
 # Features of our Project
 
 1. Login and Logout
