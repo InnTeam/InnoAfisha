@@ -4265,7 +4265,7 @@ var app = (function (exports) {
     	return block;
     }
 
-    // (24:0) {:then getEvent}
+    // (21:0) {:then getEvent}
     function create_then_block$2(ctx) {
     	let div8;
     	let div5;
@@ -4339,39 +4339,39 @@ var app = (function (exports) {
     			attr_dev(img, "width", "373px");
     			attr_dev(img, "height", "373px");
     			attr_dev(img, "alt", "event");
-    			add_location(img, file$d, 28, 4, 727);
+    			add_location(img, file$d, 25, 4, 661);
     			attr_dev(button0, "class", "rectangle2 svelte-1k7tqhw");
-    			add_location(button0, file$d, 37, 6, 905);
+    			add_location(button0, file$d, 34, 6, 839);
     			attr_dev(button1, "class", "rectangle2 svelte-1k7tqhw");
-    			add_location(button1, file$d, 38, 6, 963);
+    			add_location(button1, file$d, 35, 6, 897);
     			attr_dev(div0, "class", "line1 svelte-1k7tqhw");
-    			add_location(div0, file$d, 36, 5, 879);
+    			add_location(div0, file$d, 33, 5, 813);
     			attr_dev(div1, "class", "dateplace svelte-1k7tqhw");
-    			add_location(div1, file$d, 35, 4, 850);
+    			add_location(div1, file$d, 32, 4, 784);
     			attr_dev(button2, "class", "rectangle2 svelte-1k7tqhw");
-    			add_location(button2, file$d, 43, 6, 1099);
+    			add_location(button2, file$d, 40, 6, 1033);
     			attr_dev(button3, "class", "btn svelte-1k7tqhw");
-    			add_location(button3, file$d, 45, 7, 1189);
+    			add_location(button3, file$d, 42, 7, 1123);
     			attr_dev(a, "href", a_href_value = /*event*/ ctx[0]["link"]);
-    			add_location(a, file$d, 44, 6, 1157);
+    			add_location(a, file$d, 41, 6, 1091);
     			attr_dev(div2, "class", "line2 svelte-1k7tqhw");
-    			add_location(div2, file$d, 42, 5, 1073);
+    			add_location(div2, file$d, 39, 5, 1007);
     			attr_dev(div3, "class", "numsite svelte-1k7tqhw");
-    			add_location(div3, file$d, 41, 4, 1046);
+    			add_location(div3, file$d, 38, 4, 980);
     			attr_dev(div4, "class", "event_pic svelte-1k7tqhw");
-    			add_location(div4, file$d, 26, 3, 649);
+    			add_location(div4, file$d, 23, 3, 583);
     			attr_dev(div5, "class", "col_left svelte-1k7tqhw");
-    			add_location(div5, file$d, 25, 2, 623);
+    			add_location(div5, file$d, 22, 2, 557);
     			attr_dev(p0, "class", "title svelte-1k7tqhw");
-    			add_location(p0, file$d, 52, 3, 1305);
+    			add_location(p0, file$d, 49, 3, 1239);
     			attr_dev(p1, "class", "description svelte-1k7tqhw");
-    			add_location(p1, file$d, 56, 4, 1389);
+    			add_location(p1, file$d, 53, 4, 1323);
     			attr_dev(div6, "class", "rectangle1 svelte-1k7tqhw");
-    			add_location(div6, file$d, 55, 3, 1360);
+    			add_location(div6, file$d, 52, 3, 1294);
     			attr_dev(div7, "class", "col_right svelte-1k7tqhw");
-    			add_location(div7, file$d, 51, 2, 1278);
+    			add_location(div7, file$d, 48, 2, 1212);
     			attr_dev(div8, "class", "columns svelte-1k7tqhw");
-    			add_location(div8, file$d, 24, 1, 599);
+    			add_location(div8, file$d, 21, 1, 533);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div8, anchor);
@@ -4430,14 +4430,14 @@ var app = (function (exports) {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(24:0) {:then getEvent}",
+    		source: "(21:0) {:then getEvent}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (22:16)   <Spinner /> {:then getEvent}
+    // (19:16)   <Spinner /> {:then getEvent}
     function create_pending_block$2(ctx) {
     	let spinner;
     	let current;
@@ -4470,7 +4470,7 @@ var app = (function (exports) {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(22:16)   <Spinner /> {:then getEvent}",
+    		source: "(19:16)   <Spinner /> {:then getEvent}",
     		ctx
     	});
 
@@ -4562,8 +4562,6 @@ var app = (function (exports) {
     					0
     				);
     			}
-    		}).catch(async () => {
-    			location.reload();
     		});
     	}
 
@@ -5042,21 +5040,21 @@ var app = (function (exports) {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[15] = list[i];
-    	child_ctx[17] = i;
+    	child_ctx[18] = list[i];
+    	child_ctx[20] = i;
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[18] = list[i];
+    	child_ctx[21] = list[i];
     	return child_ctx;
     }
 
-    // (50:2) {#each types as type}
+    // (55:2) {#each types as type}
     function create_each_block_1$1(ctx) {
     	let button;
-    	let t0_value = /*type*/ ctx[18] + "";
+    	let t0_value = /*type*/ ctx[21] + "";
     	let t0;
     	let t1;
     	let mounted;
@@ -5067,10 +5065,10 @@ var app = (function (exports) {
     			button = element("button");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(button, "class", "btn svelte-w2rdhu");
-    			attr_dev(button, "data-name", /*type*/ ctx[18]);
-    			toggle_class(button, "active", /*selected*/ ctx[0] === /*type*/ ctx[18]);
-    			add_location(button, file$8, 50, 3, 1808);
+    			attr_dev(button, "class", "btn svelte-3o7xsp");
+    			attr_dev(button, "data-name", /*type*/ ctx[21]);
+    			toggle_class(button, "active", /*selected*/ ctx[0] === /*type*/ ctx[21]);
+    			add_location(button, file$8, 55, 3, 1941);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -5084,7 +5082,7 @@ var app = (function (exports) {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*selected, types*/ 9) {
-    				toggle_class(button, "active", /*selected*/ ctx[0] === /*type*/ ctx[18]);
+    				toggle_class(button, "active", /*selected*/ ctx[0] === /*type*/ ctx[21]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -5098,14 +5096,14 @@ var app = (function (exports) {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(50:2) {#each types as type}",
+    		source: "(55:2) {#each types as type}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (49:1) <ButtonContainer>
+    // (54:1) <ButtonContainer>
     function create_default_slot_1(ctx) {
     	let each_1_anchor;
     	let each_value_1 = /*types*/ ctx[3];
@@ -5166,7 +5164,7 @@ var app = (function (exports) {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(49:1) <ButtonContainer>",
+    		source: "(54:1) <ButtonContainer>",
     		ctx
     	});
 
@@ -5195,7 +5193,7 @@ var app = (function (exports) {
     	return block;
     }
 
-    // (64:1) {:then getThings}
+    // (69:1) {:then getThings}
     function create_then_block$1(ctx) {
     	let gallery;
     	let current;
@@ -5219,7 +5217,7 @@ var app = (function (exports) {
     		p: function update(ctx, dirty) {
     			const gallery_changes = {};
 
-    			if (dirty & /*$$scope, events, addFavEvent, selected*/ 2097159) {
+    			if (dirty & /*$$scope, events, addFavEvent, selected*/ 16777223) {
     				gallery_changes.$$scope = { dirty, ctx };
     			}
 
@@ -5243,26 +5241,25 @@ var app = (function (exports) {
     		block,
     		id: create_then_block$1.name,
     		type: "then",
-    		source: "(64:1) {:then getThings}",
+    		source: "(69:1) {:then getThings}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (126:4) {:else}
+    // (135:4) {:else}
     function create_else_block(ctx) {
     	let div6;
     	let div5;
-    	let a;
+    	let button0;
     	let img0;
     	let img0_src_value;
-    	let a_href_value;
     	let t0;
     	let div1;
     	let div0;
     	let h4;
-    	let t1_value = /*event*/ ctx[15]["event_name"] + "";
+    	let t1_value = /*event*/ ctx[18]["event_name"] + "";
     	let t1;
     	let t2;
     	let div3;
@@ -5271,41 +5268,45 @@ var app = (function (exports) {
     	let t3;
     	let div2;
     	let p0;
-    	let t4_value = /*event*/ ctx[15]["date"] + "";
+    	let t4_value = /*event*/ ctx[18]["date"] + "";
     	let t4;
     	let t5;
-    	let t6_value = /*event*/ ctx[15]["time"] + "";
+    	let t6_value = /*event*/ ctx[18]["time"] + "";
     	let t6;
     	let t7;
     	let p1;
-    	let t8_value = /*event*/ ctx[15]["location"] + "";
+    	let t8_value = /*event*/ ctx[18]["location"] + "";
     	let t8;
     	let t9;
     	let div4;
-    	let button0;
+    	let button1;
     	let img1;
     	let img1_src_value;
     	let t10;
-    	let button1;
+    	let button2;
     	let img2;
     	let img2_src_value;
     	let t11;
     	let mounted;
     	let dispose;
 
-    	function click_handler_2() {
-    		return /*click_handler_2*/ ctx[10](/*event*/ ctx[15]);
+    	function click_handler_3() {
+    		return /*click_handler_3*/ ctx[12](/*event*/ ctx[18]);
     	}
 
-    	function click_handler_3() {
-    		return /*click_handler_3*/ ctx[11](/*event*/ ctx[15]);
+    	function click_handler_4() {
+    		return /*click_handler_4*/ ctx[13](/*event*/ ctx[18]);
+    	}
+
+    	function click_handler_5() {
+    		return /*click_handler_5*/ ctx[14](/*event*/ ctx[18]);
     	}
 
     	const block = {
     		c: function create() {
     			div6 = element("div");
     			div5 = element("div");
-    			a = element("a");
+    			button0 = element("button");
     			img0 = element("img");
     			t0 = space();
     			div1 = element("div");
@@ -5327,65 +5328,64 @@ var app = (function (exports) {
     			t8 = text(t8_value);
     			t9 = space();
     			div4 = element("div");
-    			button0 = element("button");
+    			button1 = element("button");
     			img1 = element("img");
     			t10 = space();
-    			button1 = element("button");
+    			button2 = element("button");
     			img2 = element("img");
     			t11 = space();
-    			if (!src_url_equal(img0.src, img0_src_value = /*event*/ ctx[15]["picture"])) attr_dev(img0, "src", img0_src_value);
+    			if (!src_url_equal(img0.src, img0_src_value = /*event*/ ctx[18]["picture"])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
     			set_style(img0, "width", "100%");
-    			attr_dev(img0, "class", "svelte-w2rdhu");
-    			add_location(img0, file$8, 129, 8, 3682);
-    			attr_dev(a, "class", "pickpick svelte-w2rdhu");
-    			attr_dev(a, "href", a_href_value = "#/event/" + /*event*/ ctx[15].id);
-    			add_location(a, file$8, 128, 7, 3627);
-    			attr_dev(h4, "class", "svelte-w2rdhu");
-    			add_location(h4, file$8, 140, 9, 3916);
-    			attr_dev(div0, "class", "imgTitle svelte-w2rdhu");
+    			attr_dev(img0, "class", "svelte-3o7xsp");
+    			add_location(img0, file$8, 142, 9, 3928);
+    			attr_dev(button0, "class", "pickpick svelte-3o7xsp");
+    			add_location(button0, file$8, 137, 7, 3819);
+    			attr_dev(h4, "class", "svelte-3o7xsp");
+    			add_location(h4, file$8, 153, 9, 4167);
+    			attr_dev(div0, "class", "imgTitle svelte-3o7xsp");
     			set_style(div0, "text-align", "center");
-    			add_location(div0, file$8, 136, 8, 3829);
-    			attr_dev(div1, "class", "containerName svelte-w2rdhu");
-    			add_location(div1, file$8, 135, 7, 3793);
-    			attr_dev(hr, "class", "svelte-w2rdhu");
-    			add_location(hr, file$8, 145, 9, 4043);
-    			attr_dev(p0, "class", "svelte-w2rdhu");
-    			add_location(p0, file$8, 147, 10, 4096);
-    			attr_dev(p1, "class", "svelte-w2rdhu");
-    			add_location(p1, file$8, 148, 10, 4146);
-    			attr_dev(div2, "class", "descriptInfo svelte-w2rdhu");
-    			add_location(div2, file$8, 146, 9, 4059);
-    			add_location(center, file$8, 144, 8, 4025);
+    			add_location(div0, file$8, 149, 8, 4080);
+    			attr_dev(div1, "class", "containerName svelte-3o7xsp");
+    			add_location(div1, file$8, 148, 7, 4044);
+    			attr_dev(hr, "class", "svelte-3o7xsp");
+    			add_location(hr, file$8, 158, 9, 4294);
+    			attr_dev(p0, "class", "svelte-3o7xsp");
+    			add_location(p0, file$8, 160, 10, 4347);
+    			attr_dev(p1, "class", "svelte-3o7xsp");
+    			add_location(p1, file$8, 161, 10, 4397);
+    			attr_dev(div2, "class", "descriptInfo svelte-3o7xsp");
+    			add_location(div2, file$8, 159, 9, 4310);
+    			add_location(center, file$8, 157, 8, 4276);
     			set_style(div3, "text-align", "center");
-    			add_location(div3, file$8, 143, 7, 3983);
-    			attr_dev(img1, "class", "likedEv svelte-w2rdhu");
+    			add_location(div3, file$8, 156, 7, 4234);
+    			attr_dev(img1, "class", "likedEv svelte-3o7xsp");
     			if (!src_url_equal(img1.src, img1_src_value = "img/liked.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "like");
-    			add_location(img1, file$8, 161, 9, 4470);
-    			attr_dev(button0, "type", "addFavEvent");
-    			attr_dev(button0, "class", "bLikedEv svelte-w2rdhu");
-    			add_location(button0, file$8, 153, 8, 4262);
-    			attr_dev(img2, "class", "likedEv svelte-w2rdhu");
+    			add_location(img1, file$8, 174, 9, 4721);
+    			attr_dev(button1, "type", "addFavEvent");
+    			attr_dev(button1, "class", "bLikedEv svelte-3o7xsp");
+    			add_location(button1, file$8, 166, 8, 4513);
+    			attr_dev(img2, "class", "likedEv svelte-3o7xsp");
     			if (!src_url_equal(img2.src, img2_src_value = "img/dislike.svg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "dislike");
-    			add_location(img2, file$8, 175, 9, 4801);
-    			attr_dev(button1, "type", "addFavEvent");
-    			attr_dev(button1, "class", "bLikedEv svelte-w2rdhu");
-    			add_location(button1, file$8, 167, 8, 4590);
-    			attr_dev(div4, "class", "buttonLiked svelte-w2rdhu");
-    			add_location(div4, file$8, 152, 7, 4228);
-    			attr_dev(div5, "class", "content svelte-w2rdhu");
-    			add_location(div5, file$8, 127, 6, 3598);
-    			attr_dev(div6, "class", "column svelte-w2rdhu");
-    			toggle_class(div6, "show", /*selected*/ ctx[0] === /*event*/ ctx[15]["type"]);
-    			add_location(div6, file$8, 126, 5, 3531);
+    			add_location(img2, file$8, 188, 9, 5052);
+    			attr_dev(button2, "type", "addFavEvent");
+    			attr_dev(button2, "class", "bLikedEv svelte-3o7xsp");
+    			add_location(button2, file$8, 180, 8, 4841);
+    			attr_dev(div4, "class", "buttonLiked svelte-3o7xsp");
+    			add_location(div4, file$8, 165, 7, 4479);
+    			attr_dev(div5, "class", "content svelte-3o7xsp");
+    			add_location(div5, file$8, 136, 6, 3790);
+    			attr_dev(div6, "class", "column svelte-3o7xsp");
+    			toggle_class(div6, "show", /*selected*/ ctx[0] === /*event*/ ctx[18]["type"]);
+    			add_location(div6, file$8, 135, 5, 3723);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div6, anchor);
     			append_dev(div6, div5);
-    			append_dev(div5, a);
-    			append_dev(a, img0);
+    			append_dev(div5, button0);
+    			append_dev(button0, img0);
     			append_dev(div5, t0);
     			append_dev(div5, div1);
     			append_dev(div1, div0);
@@ -5406,17 +5406,18 @@ var app = (function (exports) {
     			append_dev(p1, t8);
     			append_dev(div5, t9);
     			append_dev(div5, div4);
-    			append_dev(div4, button0);
-    			append_dev(button0, img1);
-    			append_dev(div4, t10);
     			append_dev(div4, button1);
-    			append_dev(button1, img2);
+    			append_dev(button1, img1);
+    			append_dev(div4, t10);
+    			append_dev(div4, button2);
+    			append_dev(button2, img2);
     			append_dev(div6, t11);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", click_handler_2, false, false, false),
-    					listen_dev(button1, "click", click_handler_3, false, false, false)
+    					listen_dev(button0, "click", click_handler_3, false, false, false),
+    					listen_dev(button1, "click", click_handler_4, false, false, false),
+    					listen_dev(button2, "click", click_handler_5, false, false, false)
     				];
 
     				mounted = true;
@@ -5425,21 +5426,17 @@ var app = (function (exports) {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty & /*events*/ 2 && !src_url_equal(img0.src, img0_src_value = /*event*/ ctx[15]["picture"])) {
+    			if (dirty & /*events*/ 2 && !src_url_equal(img0.src, img0_src_value = /*event*/ ctx[18]["picture"])) {
     				attr_dev(img0, "src", img0_src_value);
     			}
 
-    			if (dirty & /*events*/ 2 && a_href_value !== (a_href_value = "#/event/" + /*event*/ ctx[15].id)) {
-    				attr_dev(a, "href", a_href_value);
-    			}
-
-    			if (dirty & /*events*/ 2 && t1_value !== (t1_value = /*event*/ ctx[15]["event_name"] + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*events*/ 2 && t4_value !== (t4_value = /*event*/ ctx[15]["date"] + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*events*/ 2 && t6_value !== (t6_value = /*event*/ ctx[15]["time"] + "")) set_data_dev(t6, t6_value);
-    			if (dirty & /*events*/ 2 && t8_value !== (t8_value = /*event*/ ctx[15]["location"] + "")) set_data_dev(t8, t8_value);
+    			if (dirty & /*events*/ 2 && t1_value !== (t1_value = /*event*/ ctx[18]["event_name"] + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*events*/ 2 && t4_value !== (t4_value = /*event*/ ctx[18]["date"] + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*events*/ 2 && t6_value !== (t6_value = /*event*/ ctx[18]["time"] + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*events*/ 2 && t8_value !== (t8_value = /*event*/ ctx[18]["location"] + "")) set_data_dev(t8, t8_value);
 
     			if (dirty & /*selected, events*/ 3) {
-    				toggle_class(div6, "show", /*selected*/ ctx[0] === /*event*/ ctx[15]["type"]);
+    				toggle_class(div6, "show", /*selected*/ ctx[0] === /*event*/ ctx[18]["type"]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -5453,26 +5450,25 @@ var app = (function (exports) {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(126:4) {:else}",
+    		source: "(135:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (67:4) {#if selected === "all"}
+    // (72:4) {#if selected === "all"}
     function create_if_block$1(ctx) {
     	let div6;
     	let div5;
-    	let a;
+    	let button0;
     	let img0;
     	let img0_src_value;
-    	let a_href_value;
     	let t0;
     	let div1;
     	let div0;
     	let h4;
-    	let t1_value = /*event*/ ctx[15]["event_name"] + "";
+    	let t1_value = /*event*/ ctx[18]["event_name"] + "";
     	let t1;
     	let t2;
     	let div3;
@@ -5481,22 +5477,22 @@ var app = (function (exports) {
     	let t3;
     	let div2;
     	let p0;
-    	let t4_value = /*event*/ ctx[15]["date"] + "";
+    	let t4_value = /*event*/ ctx[18]["date"] + "";
     	let t4;
     	let t5;
-    	let t6_value = /*event*/ ctx[15]["time"] + "";
+    	let t6_value = /*event*/ ctx[18]["time"] + "";
     	let t6;
     	let t7;
     	let p1;
-    	let t8_value = /*event*/ ctx[15]["location"] + "";
+    	let t8_value = /*event*/ ctx[18]["location"] + "";
     	let t8;
     	let t9;
     	let div4;
-    	let button0;
+    	let button1;
     	let img1;
     	let img1_src_value;
     	let t10;
-    	let button1;
+    	let button2;
     	let img2;
     	let img2_src_value;
     	let t11;
@@ -5504,18 +5500,22 @@ var app = (function (exports) {
     	let dispose;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[8](/*event*/ ctx[15]);
+    		return /*click_handler*/ ctx[9](/*event*/ ctx[18]);
     	}
 
     	function click_handler_1() {
-    		return /*click_handler_1*/ ctx[9](/*event*/ ctx[15]);
+    		return /*click_handler_1*/ ctx[10](/*event*/ ctx[18]);
+    	}
+
+    	function click_handler_2() {
+    		return /*click_handler_2*/ ctx[11](/*event*/ ctx[18]);
     	}
 
     	const block = {
     		c: function create() {
     			div6 = element("div");
     			div5 = element("div");
-    			a = element("a");
+    			button0 = element("button");
     			img0 = element("img");
     			t0 = space();
     			div1 = element("div");
@@ -5537,64 +5537,63 @@ var app = (function (exports) {
     			t8 = text(t8_value);
     			t9 = space();
     			div4 = element("div");
-    			button0 = element("button");
+    			button1 = element("button");
     			img1 = element("img");
     			t10 = space();
-    			button1 = element("button");
+    			button2 = element("button");
     			img2 = element("img");
     			t11 = space();
-    			if (!src_url_equal(img0.src, img0_src_value = /*event*/ ctx[15]["picture"])) attr_dev(img0, "src", img0_src_value);
+    			if (!src_url_equal(img0.src, img0_src_value = /*event*/ ctx[18]["picture"])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
     			set_style(img0, "width", "100%");
-    			attr_dev(img0, "class", "svelte-w2rdhu");
-    			add_location(img0, file$8, 70, 8, 2239);
-    			attr_dev(a, "class", "pickpick svelte-w2rdhu");
-    			attr_dev(a, "href", a_href_value = "#/event/" + /*event*/ ctx[15].id);
-    			add_location(a, file$8, 69, 7, 2184);
-    			attr_dev(h4, "class", "svelte-w2rdhu");
-    			add_location(h4, file$8, 81, 9, 2473);
-    			attr_dev(div0, "class", "imgTitle svelte-w2rdhu");
+    			attr_dev(img0, "class", "svelte-3o7xsp");
+    			add_location(img0, file$8, 79, 9, 2426);
+    			attr_dev(button0, "class", "pickpick svelte-3o7xsp");
+    			add_location(button0, file$8, 74, 7, 2317);
+    			attr_dev(h4, "class", "svelte-3o7xsp");
+    			add_location(h4, file$8, 90, 9, 2665);
+    			attr_dev(div0, "class", "imgTitle svelte-3o7xsp");
     			set_style(div0, "text-align", "center");
-    			add_location(div0, file$8, 77, 8, 2386);
-    			attr_dev(div1, "class", "containerName svelte-w2rdhu");
-    			add_location(div1, file$8, 76, 7, 2350);
-    			attr_dev(hr, "class", "svelte-w2rdhu");
-    			add_location(hr, file$8, 86, 9, 2600);
-    			attr_dev(p0, "class", "svelte-w2rdhu");
-    			add_location(p0, file$8, 88, 10, 2653);
-    			attr_dev(p1, "class", "svelte-w2rdhu");
-    			add_location(p1, file$8, 89, 10, 2703);
-    			attr_dev(div2, "class", "descriptInfo svelte-w2rdhu");
-    			add_location(div2, file$8, 87, 9, 2616);
-    			add_location(center, file$8, 85, 8, 2582);
+    			add_location(div0, file$8, 86, 8, 2578);
+    			attr_dev(div1, "class", "containerName svelte-3o7xsp");
+    			add_location(div1, file$8, 85, 7, 2542);
+    			attr_dev(hr, "class", "svelte-3o7xsp");
+    			add_location(hr, file$8, 95, 9, 2792);
+    			attr_dev(p0, "class", "svelte-3o7xsp");
+    			add_location(p0, file$8, 97, 10, 2845);
+    			attr_dev(p1, "class", "svelte-3o7xsp");
+    			add_location(p1, file$8, 98, 10, 2895);
+    			attr_dev(div2, "class", "descriptInfo svelte-3o7xsp");
+    			add_location(div2, file$8, 96, 9, 2808);
+    			add_location(center, file$8, 94, 8, 2774);
     			set_style(div3, "text-align", "center");
-    			add_location(div3, file$8, 84, 7, 2540);
-    			attr_dev(img1, "class", "likedEv svelte-w2rdhu");
+    			add_location(div3, file$8, 93, 7, 2732);
+    			attr_dev(img1, "class", "likedEv svelte-3o7xsp");
     			if (!src_url_equal(img1.src, img1_src_value = "img/liked.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "like");
-    			add_location(img1, file$8, 102, 9, 3027);
-    			attr_dev(button0, "type", "addFavEvent");
-    			attr_dev(button0, "class", "bLikedEv svelte-w2rdhu");
-    			add_location(button0, file$8, 94, 8, 2819);
-    			attr_dev(img2, "class", "likedEv svelte-w2rdhu");
+    			add_location(img1, file$8, 111, 9, 3219);
+    			attr_dev(button1, "type", "addFavEvent");
+    			attr_dev(button1, "class", "bLikedEv svelte-3o7xsp");
+    			add_location(button1, file$8, 103, 8, 3011);
+    			attr_dev(img2, "class", "likedEv svelte-3o7xsp");
     			if (!src_url_equal(img2.src, img2_src_value = "img/dislike.svg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "dislike");
-    			add_location(img2, file$8, 116, 9, 3358);
-    			attr_dev(button1, "type", "addFavEvent");
-    			attr_dev(button1, "class", "bLikedEv svelte-w2rdhu");
-    			add_location(button1, file$8, 108, 8, 3147);
-    			attr_dev(div4, "class", "buttonLiked svelte-w2rdhu");
-    			add_location(div4, file$8, 93, 7, 2785);
-    			attr_dev(div5, "class", "content svelte-w2rdhu");
-    			add_location(div5, file$8, 68, 6, 2155);
-    			attr_dev(div6, "class", "show column svelte-w2rdhu");
-    			add_location(div6, file$8, 67, 5, 2123);
+    			add_location(img2, file$8, 125, 9, 3550);
+    			attr_dev(button2, "type", "addFavEvent");
+    			attr_dev(button2, "class", "bLikedEv svelte-3o7xsp");
+    			add_location(button2, file$8, 117, 8, 3339);
+    			attr_dev(div4, "class", "buttonLiked svelte-3o7xsp");
+    			add_location(div4, file$8, 102, 7, 2977);
+    			attr_dev(div5, "class", "content svelte-3o7xsp");
+    			add_location(div5, file$8, 73, 6, 2288);
+    			attr_dev(div6, "class", "show column svelte-3o7xsp");
+    			add_location(div6, file$8, 72, 5, 2256);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div6, anchor);
     			append_dev(div6, div5);
-    			append_dev(div5, a);
-    			append_dev(a, img0);
+    			append_dev(div5, button0);
+    			append_dev(button0, img0);
     			append_dev(div5, t0);
     			append_dev(div5, div1);
     			append_dev(div1, div0);
@@ -5615,17 +5614,18 @@ var app = (function (exports) {
     			append_dev(p1, t8);
     			append_dev(div5, t9);
     			append_dev(div5, div4);
-    			append_dev(div4, button0);
-    			append_dev(button0, img1);
-    			append_dev(div4, t10);
     			append_dev(div4, button1);
-    			append_dev(button1, img2);
+    			append_dev(button1, img1);
+    			append_dev(div4, t10);
+    			append_dev(div4, button2);
+    			append_dev(button2, img2);
     			append_dev(div6, t11);
 
     			if (!mounted) {
     				dispose = [
     					listen_dev(button0, "click", click_handler, false, false, false),
-    					listen_dev(button1, "click", click_handler_1, false, false, false)
+    					listen_dev(button1, "click", click_handler_1, false, false, false),
+    					listen_dev(button2, "click", click_handler_2, false, false, false)
     				];
 
     				mounted = true;
@@ -5634,18 +5634,14 @@ var app = (function (exports) {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty & /*events*/ 2 && !src_url_equal(img0.src, img0_src_value = /*event*/ ctx[15]["picture"])) {
+    			if (dirty & /*events*/ 2 && !src_url_equal(img0.src, img0_src_value = /*event*/ ctx[18]["picture"])) {
     				attr_dev(img0, "src", img0_src_value);
     			}
 
-    			if (dirty & /*events*/ 2 && a_href_value !== (a_href_value = "#/event/" + /*event*/ ctx[15].id)) {
-    				attr_dev(a, "href", a_href_value);
-    			}
-
-    			if (dirty & /*events*/ 2 && t1_value !== (t1_value = /*event*/ ctx[15]["event_name"] + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*events*/ 2 && t4_value !== (t4_value = /*event*/ ctx[15]["date"] + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*events*/ 2 && t6_value !== (t6_value = /*event*/ ctx[15]["time"] + "")) set_data_dev(t6, t6_value);
-    			if (dirty & /*events*/ 2 && t8_value !== (t8_value = /*event*/ ctx[15]["location"] + "")) set_data_dev(t8, t8_value);
+    			if (dirty & /*events*/ 2 && t1_value !== (t1_value = /*event*/ ctx[18]["event_name"] + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*events*/ 2 && t4_value !== (t4_value = /*event*/ ctx[18]["date"] + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*events*/ 2 && t6_value !== (t6_value = /*event*/ ctx[18]["time"] + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*events*/ 2 && t8_value !== (t8_value = /*event*/ ctx[18]["location"] + "")) set_data_dev(t8, t8_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div6);
@@ -5658,14 +5654,14 @@ var app = (function (exports) {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(67:4) {#if selected === \\\"all\\\"}",
+    		source: "(72:4) {#if selected === \\\"all\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (66:3) {#each events as event, index (event.id)}
+    // (71:3) {#each events as event, index (event.id)}
     function create_each_block$1(key_1, ctx) {
     	let first;
     	let if_block_anchor;
@@ -5718,21 +5714,21 @@ var app = (function (exports) {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(66:3) {#each events as event, index (event.id)}",
+    		source: "(71:3) {#each events as event, index (event.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (65:2) <Gallery>
+    // (70:2) <Gallery>
     function create_default_slot$1(ctx) {
     	let each_blocks = [];
     	let each_1_lookup = new Map();
     	let each_1_anchor;
     	let each_value = /*events*/ ctx[1];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*event*/ ctx[15].id;
+    	const get_key = ctx => /*event*/ ctx[18].id;
     	validate_each_keys(ctx, each_value, get_each_context$1, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -5757,7 +5753,7 @@ var app = (function (exports) {
     			insert_dev(target, each_1_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*deleteFavEvent, events, addFavEvent, selected*/ 71) {
+    			if (dirty & /*deleteFavEvent, events, addFavEvent, goToEvent, selected*/ 199) {
     				each_value = /*events*/ ctx[1];
     				validate_each_argument(each_value);
     				validate_each_keys(ctx, each_value, get_each_context$1, get_key);
@@ -5777,14 +5773,14 @@ var app = (function (exports) {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(65:2) <Gallery>",
+    		source: "(70:2) <Gallery>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (62:17)    <Spinner />  {:then getThings}
+    // (67:17)    <Spinner />  {:then getThings}
     function create_pending_block$1(ctx) {
     	let spinner;
     	let current;
@@ -5817,7 +5813,7 @@ var app = (function (exports) {
     		block,
     		id: create_pending_block$1.name,
     		type: "pending",
-    		source: "(62:17)    <Spinner />  {:then getThings}",
+    		source: "(67:17)    <Spinner />  {:then getThings}",
     		ctx
     	});
 
@@ -5846,7 +5842,7 @@ var app = (function (exports) {
     		pending: create_pending_block$1,
     		then: create_then_block$1,
     		catch: create_catch_block$1,
-    		value: 14,
+    		value: 17,
     		blocks: [,,,]
     	};
 
@@ -5858,8 +5854,8 @@ var app = (function (exports) {
     			create_component(buttoncontainer.$$.fragment);
     			t = space();
     			info.block.c();
-    			attr_dev(main, "class", "svelte-w2rdhu");
-    			add_location(main, file$8, 47, 0, 1755);
+    			attr_dev(main, "class", "svelte-3o7xsp");
+    			add_location(main, file$8, 52, 0, 1888);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5877,7 +5873,7 @@ var app = (function (exports) {
     			ctx = new_ctx;
     			const buttoncontainer_changes = {};
 
-    			if (dirty & /*$$scope, selected*/ 2097153) {
+    			if (dirty & /*$$scope, selected*/ 16777217) {
     				buttoncontainer_changes.$$scope = { dirty, ctx };
     			}
 
@@ -5948,8 +5944,14 @@ var app = (function (exports) {
 
     	async function deleteFavEvent(id) {
     		let sourceDelete = app[id];
-    		$$invalidate(7, axios.defaults.headers.common["Authorization"] = `Token ${document.cookie.replace(/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/, "$1")}`, axios);
+    		$$invalidate(8, axios.defaults.headers.common["Authorization"] = `Token ${document.cookie.replace(/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/, "$1")}`, axios);
     		await axios.delete("https://innoafisha.pythonanywhere.com/api/v1/favourites/" + sourceDelete);
+    	}
+
+    	async function goToEvent(idEvent) {
+    		let idEventt = idEvent;
+    		await push(`#/event/` + idEventt);
+    		location.reload();
     	}
 
     	const writable_props = [];
@@ -5959,18 +5961,26 @@ var app = (function (exports) {
     	});
 
     	const click_handler = event => {
-    		addFavEvent(event.id);
+    		goToEvent(event.id);
     	};
 
     	const click_handler_1 = event => {
-    		deleteFavEvent(event.id);
-    	};
-
-    	const click_handler_2 = event => {
     		addFavEvent(event.id);
     	};
 
+    	const click_handler_2 = event => {
+    		deleteFavEvent(event.id);
+    	};
+
     	const click_handler_3 = event => {
+    		goToEvent(event.id);
+    	};
+
+    	const click_handler_4 = event => {
+    		addFavEvent(event.id);
+    	};
+
+    	const click_handler_5 = event => {
     		deleteFavEvent(event.id);
     	};
 
@@ -5989,6 +5999,7 @@ var app = (function (exports) {
     		getThings,
     		promise,
     		deleteFavEvent,
+    		goToEvent,
     		addFavEvent
     	});
 
@@ -6005,9 +6016,9 @@ var app = (function (exports) {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*axios*/ 128) {
+    		if ($$self.$$.dirty & /*axios*/ 256) {
     			$$invalidate(2, addFavEvent = async id => {
-    				$$invalidate(7, axios.defaults.headers.common["Authorization"] = `Token ${document.cookie.replace(/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/, "$1")}`, axios);
+    				$$invalidate(8, axios.defaults.headers.common["Authorization"] = `Token ${document.cookie.replace(/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/, "$1")}`, axios);
 
     				await axios.post("https://innoafisha.pythonanywhere.com/api/v1/favourites", { event: id }, {
     					headers: { "Content-Type": "application/json" }
@@ -6029,11 +6040,14 @@ var app = (function (exports) {
     		filterSelection,
     		promise,
     		deleteFavEvent,
+    		goToEvent,
     		axios,
     		click_handler,
     		click_handler_1,
     		click_handler_2,
-    		click_handler_3
+    		click_handler_3,
+    		click_handler_4,
+    		click_handler_5
     	];
     }
 
