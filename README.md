@@ -22,6 +22,12 @@ event, etc.
 ## Design
 
 ![](https://github.com/InnTeam/InnoAfisha/blob/frontEnd/forReadme/1.jpg)
+![](https://github.com/InnTeam/InnoAfisha/blob/frontEnd/forReadme/2.jpg)
+![](https://github.com/InnTeam/InnoAfisha/blob/frontEnd/forReadme/3.jpg)
+![](https://github.com/InnTeam/InnoAfisha/blob/frontEnd/forReadme/4.jpg)
+![](https://github.com/InnTeam/InnoAfisha/blob/frontEnd/forReadme/5.jpg)
+![](https://github.com/InnTeam/InnoAfisha/blob/frontEnd/forReadme/6.jpg)
+![](https://github.com/InnTeam/InnoAfisha/blob/frontEnd/forReadme/7.jpg)
 
 
 # Features of our Project
