@@ -45,7 +45,7 @@ We use the Svelte with TypeScript for our project. Also we write some backend on
 
 ## Future scope
 
--   Deploy it and add the ability to deleting favorites events
+-   Deploy it
 
 # Our team
 
