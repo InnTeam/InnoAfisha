@@ -46,7 +46,7 @@
 								<a class="pickpick" href="#/event/{event.id}">
 									<img
 										src={event["picture"]}
-										alt=""
+										alt="event"
 										style="width:100%"
 									/>
 								</a>
