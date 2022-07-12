@@ -29,6 +29,7 @@ event, etc.
 ![](https://github.com/InnTeam/InnoAfisha/blob/frontEnd/forReadme/6.jpg)
 ![](https://github.com/InnTeam/InnoAfisha/blob/frontEnd/forReadme/7.jpg)
 
+Link to the [Figma](https://www.figma.com/file/cB7IsRzaLS3LSPRUxb3yz8/Untitled?node-id=0%3A1)
 
 # Features of our Project
 
