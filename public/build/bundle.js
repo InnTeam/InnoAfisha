@@ -2892,9 +2892,9 @@ var app = (function (exports) {
     			div = element("div");
     			t2 = space();
     			create_component(footer.$$.fragment);
-    			attr_dev(div, "class", "spacespace svelte-1hrkye8");
+    			attr_dev(div, "class", "spacespace svelte-y2duh8");
     			add_location(div, file$c, 10, 2, 270);
-    			attr_dev(body, "class", "svelte-1hrkye8");
+    			attr_dev(body, "class", "svelte-y2duh8");
     			add_location(body, file$c, 7, 1, 213);
     			add_location(main, file$c, 6, 0, 205);
     		},

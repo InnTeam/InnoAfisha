@@ -21,6 +21,6 @@
 		margin: 0;
 	}
 	.spacespace {
-		height: 50px;
+		height: 30px;
 	}
 </style>
