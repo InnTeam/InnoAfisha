@@ -33,7 +33,7 @@
 				style="text-decoration: none; color: #4E7149"
 			>
 				<!-- svelte-ignore a11y-missing-attribute -->
-				<img src="img/favorite.png" width="30px" height="auto" /></a
+				<img src="img/favourite.png" width="30px" height="auto" /></a
 			>
 			{#if !document.cookie}
 				<button
