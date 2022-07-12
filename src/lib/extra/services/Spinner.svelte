@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let size = 60;
 	export let color = "#FF3E00";
 	export let unit = "px";

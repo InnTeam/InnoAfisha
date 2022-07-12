@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Gallery from "../extra/services/Gallery.svelte";
 	import Spinner from "../extra/services/Spinner.svelte";
 	import axios from "axios";
