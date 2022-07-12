@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-lg-2  col-md-3 col-sm-6">
 				<div class="footer-widget">
-					<h6>Contact us if you have any question</h6>
+					<h6>Contact us if you have any questions</h6>
 					<ul>
 						<li>n.grigorenko@innopolis.university</li>
 						<li>i.chebykin@innopolis.university</li>

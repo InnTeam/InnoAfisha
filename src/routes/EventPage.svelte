@@ -9,6 +9,7 @@
 	<body>
 		<Header />
 		<EventLoad params={params.id} />
+		<div class="spacespace" />
 		<Footer />
 	</body>
 </main>
@@ -18,5 +19,8 @@
 		background-color: #c2ecbf;
 		padding: 0;
 		margin: 0;
+	}
+	.spacespace {
+		height: 50px;
 	}
 </style>

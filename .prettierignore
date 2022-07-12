@@ -6,3 +6,6 @@ node_modules
 .env
 .env.*
 .rollup.config.js
+svelte.config.js
+main.ts
+**/*.js

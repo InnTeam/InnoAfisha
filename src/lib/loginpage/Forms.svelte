@@ -33,15 +33,15 @@
 <form action="#" class="sign-up-form" on:submit|preventDefault={submit}>
 	<h2 class="titleA">Sign up</h2>
 	<div class="input-field">
-		<i class="fas fa-user"></i>
+		<i class="fas fa-user" />
 		<input bind:value={username} type="text" placeholder="Username" />
 	</div>
 	<div class="input-field">
-		<i class="fas fa-envelope"></i>
+		<i class="fas fa-envelope" />
 		<input bind:value={email} type="email" placeholder="Email" />
 	</div>
 	<div class="input-field">
-		<i class="fas fa-lock"></i>
+		<i class="fas fa-lock" />
 		<input bind:value={password} type="password" placeholder="Password" />
 	</div>
 	<input type="submit" class="btnA" value="Sign up" id="sign-inin-btn" />
