@@ -21,7 +21,8 @@ event, etc.
 
 ## Design
 
-!(https://github.com/InnTeam/InnoAfisha/frontEnd/forReadme/1.png)
+!https://github.com/InnTeam/InnoAfisha/raw/frontEnd/forReadme/1.png
+
 
 # Features of our Project
 
