@@ -61,6 +61,7 @@
 			"^.+\\.js$": "babel-jest",
 			"^.+\\.ts$": "ts-jest"
 		}, 
+		"transformIgnorePatterns": ["node_modules/(?!(svelte-spa-router|svelte-i18n)/)"],
 		"moduleFileExtensions": [
 			"js",
 			"ts",

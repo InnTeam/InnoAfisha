@@ -1,6 +1,6 @@
 <script>
 	import Gallery from "../extra/services/Gallery.svelte";
-	import Spinner from "../extra/services/spinner.svelte";
+	import Spinner from "../extra/services/Spinner.svelte";
 	import axios from "axios";
 	import { push } from "svelte-spa-router";
 

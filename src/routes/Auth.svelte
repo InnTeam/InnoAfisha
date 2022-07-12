@@ -1,6 +1,4 @@
 <script lang="ts">
-import { loop_guard } from "svelte/internal";
-
 	import Forms from "../lib/loginpage/Forms.svelte";
 	import FormsLogin from "../lib/loginpage/FormsLogin.svelte";
 	import Panels from "../lib/loginpage/Panels.svelte";

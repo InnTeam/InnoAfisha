@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Spinner from "../extra/services/spinner.svelte";
+	import Spinner from "../extra/services/Spinner.svelte";
 	export let params = "";
 	let event = [];
 	async function getEvent() {
