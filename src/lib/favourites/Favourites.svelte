@@ -65,12 +65,12 @@
 				{/each}
 			{/each}
 		</Gallery>
-			<dev class="nothingHere">
+			<div class="nothingHere">
 				<h1>
 					Oops, there's nothing here... Like the events if you want to
 					see more...
 				</h1>
-			</dev>
+			</div>
 	{/await}
 </main>
 
