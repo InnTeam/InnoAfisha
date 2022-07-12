@@ -13,20 +13,16 @@
 	const filterSelection = (e) => (selected = e.target.dataset.name);
 
 	let events = [];
-	let colNames = [];
 	let sourceJson = "events";
 
 	async function getThings() {
-		const res = await fetch(
+		const res = await axios.get(
 			`https://innoafisha.pythonanywhere.com/api/v1/` + sourceJson,
 		);
-		const json = await res.json();
 
-		if (res.ok) {
+		if (res.status === 200) {
 			setTimeout(() => {
-				events = json;
-				colNames = Object.keys(events[0]);
-
+				events = res.data;
 				return true;
 			}, 0);
 		}

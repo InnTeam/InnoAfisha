@@ -30,11 +30,11 @@
 <form action="#" class="sign-in-form" on:submit|preventDefault={submit}>
 	<h2 class="titleA">Sign in</h2>
 	<div class="input-field">
-		<i class="fas fa-user"></i>
+		<i class="fas fa-user" />
 		<input bind:value={usernameL} type="text" placeholder="Username" />
 	</div>
 	<div class="input-field">
-		<i class="fas fa-lock"></i>
+		<i class="fas fa-lock" />
 		<input bind:value={passwordL} type="password" placeholder="Password" />
 	</div>
 	<input type="submit" value="Login" class="btnA solid" />

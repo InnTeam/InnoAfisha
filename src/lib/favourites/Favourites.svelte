@@ -14,17 +14,19 @@
 			/(?:(?:^|.*;\s*)access_token\s*\=\s*([^;]*).*$)|^.*$/,
 			"$1",
 		)}`;
-		let res = await axios
+		await axios
 			.get("https://innoafisha.pythonanywhere.com/api/v1/favourites")
+			.then(async (res) => {
+				eventsIds = res.data;
+			})
 			.catch(async () => {
 				await push("#/auth");
 				location.reload();
 			});
-		eventsIds = res.data;
-		res = await axios.get(
+		const resres = await axios.get(
 			`https://innoafisha.pythonanywhere.com/api/v1/events`,
 		);
-		events = res.data;
+		events = resres.data;
 	}
 
 	let promise = getThings();

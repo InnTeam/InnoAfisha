@@ -1,20 +1,25 @@
 <script lang="ts">
 	import Spinner from "../extra/services/Spinner.svelte";
+	import axios from "axios";
 
 	export let params = "";
 	let event = [];
 
 	async function getEvent() {
-		const res = await fetch(
-			`https://innoafisha.pythonanywhere.com/api/v1/events/` + params,
-		);
-		const json = await res.json();
-		if (res.ok) {
-			setTimeout(() => {
-				event = json;
-				return true;
-			}, 0);
-		}
+		await axios
+			.get(
+				`https://innoafisha.pythonanywhere.com/api/v1/events/` + params,
+			)
+			.then(async (res) => {
+				if (res.status === 200) {
+					setTimeout(() => {
+						event = res.data;
+					}, 0);
+				}
+			})
+			.catch(async () => {
+				location.reload();
+			});
 	}
 
 	let promise = getEvent();
