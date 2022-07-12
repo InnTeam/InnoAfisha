@@ -112,11 +112,13 @@
 								</div>
 							</div>
 							<div style="text-align: center;">
-								<hr />
-								<div class="descriptInfo">
-									<p>{event["date"]}, {event["time"]}</p>
-									<p>{event["location"]}</p>
-								</div>
+								<center>
+									<hr />
+									<div class="descriptInfo">
+										<p>{event["date"]}, {event["time"]}</p>
+										<p>{event["location"]}</p>
+									</div>
+								</center>
 							</div>
 							<div class="buttonLiked">
 								<button
@@ -169,11 +171,13 @@
 								</div>
 							</div>
 							<div style="text-align: center;">
-								<hr />
-								<div class="descriptInfo">
-									<p>{event["date"]}, {event["time"]}</p>
-									<p>{event["location"]}</p>
-								</div>
+								<center>
+									<hr />
+									<div class="descriptInfo">
+										<p>{event["date"]}, {event["time"]}</p>
+										<p>{event["location"]}</p>
+									</div>
+								</center>
 							</div>
 							<div class="buttonLiked">
 								<button
