@@ -4,7 +4,7 @@
 	export let unit = "px";
 </script>
 
-<div class="circle" style="--size: {size}{unit}; --color: {color};" />
+<div class="circle" style="--size: {size}{unit}; --color: {color};"></div>
 
 <style>
 	.circle {

@@ -29,11 +29,11 @@
 <form action="#" class="sign-in-form" on:submit|preventDefault={submit}>
 	<h2 class="titleA">Sign in</h2>
 	<div class="input-field">
-		<i class="fas fa-user" />
+		<i class="fas fa-user"></i>
 		<input bind:value={usernameL} type="text" placeholder="Username" />
 	</div>
 	<div class="input-field">
-		<i class="fas fa-lock" />
+		<i class="fas fa-lock"></i>
 		<input bind:value={passwordL} type="password" placeholder="Password" />
 	</div>
 	<input type="submit" value="Login" class="btnA solid" />
@@ -45,7 +45,7 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		padding: 0rem 5rem;
+		padding: 0 5rem;
 		transition: all 0.2s 0.7s;
 		overflow: hidden;
 		grid-column: 1 / 2;
