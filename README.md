@@ -1,12 +1,7 @@
 <h1 align="center">InnoAfisha</h1>
 
 
-## Project setup
-
-```
-npm install
-npm run dev
-```
+## Please, go to the frontEnd branch
 
 
 ## Description
@@ -34,11 +29,6 @@ event, etc.
 # Frameworks or technology
 
 We use the Svelte with TypeScript for our project. Also we write some backend on Jango for authorization and saving events
-
-
-## Future scope
-
-- Deploy it and add the ability to deleting favorites events
 
 
 # Our team
